@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdT-eh-74t">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackToTheOffice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK TO THE OFFICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRo-3J-eYE">
-                                <rect key="frame" x="32" y="20" width="162" height="17"/>
+                                <rect key="frame" x="32" y="64" width="162" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="W9k-fe-ZCW"/>
                                     <constraint firstAttribute="height" constant="17" id="hyP-DP-Lkj"/>
@@ -50,7 +50,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A32-Sq-Yn1">
-                                <rect key="frame" x="92" y="79" width="193" height="41"/>
+                                <rect key="frame" x="92" y="243" width="193" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="cdF-XJ-CJm"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxT-mL-f1A">
-                                <rect key="frame" x="92" y="169" width="136" height="34"/>
+                                <rect key="frame" x="92" y="333" width="230" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="0XM-zt-1f4"/>
                                     <constraint firstAttribute="height" constant="34" id="Gl5-BI-DKl"/>
@@ -112,7 +112,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qG0-Kt-jOK">
-                                <rect key="frame" x="92" y="218" width="136" height="34"/>
+                                <rect key="frame" x="92" y="382" width="230" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="IF2-T0-VDV"/>
                                     <constraint firstAttribute="height" constant="34" id="dh9-6o-Wtz"/>
@@ -155,7 +155,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gea-CX-BVc">
-                                <rect key="frame" x="92" y="267" width="136" height="34"/>
+                                <rect key="frame" x="92" y="431" width="230" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="566-gy-Mtv"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="fUy-og-IVf"/>
@@ -198,7 +198,7 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-sA-qDl">
-                                <rect key="frame" x="92" y="398" width="136" height="30"/>
+                                <rect key="frame" x="92" y="562" width="230" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="07x-84-H3D"/>
                                     <constraint firstAttribute="height" constant="30" id="CY1-gY-Vzy"/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, I agree to the Back to the Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-gE-jzb">
-                                <rect key="frame" x="92" y="349" width="228" height="14"/>
+                                <rect key="frame" x="92.000000000000014" y="513" width="247.33333333333337" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="1cB-hL-08g"/>
                                     <constraint firstAttribute="height" constant="14" id="4O9-St-r3m"/>
@@ -271,7 +271,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPv-cO-eRk">
-                                <rect key="frame" x="172" y="367" width="21" height="14"/>
+                                <rect key="frame" x="172" y="531" width="21" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="nNY-l7-jvk"/>
                                     <constraint firstAttribute="height" constant="14" id="odv-e5-PZr"/>
@@ -304,7 +304,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsU-OX-6ks">
-                                <rect key="frame" x="136" y="361" width="33" height="26"/>
+                                <rect key="frame" x="136" y="525" width="33" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="8Gk-Oh-cSS"/>
                                     <constraint firstAttribute="height" constant="26" id="9Cd-6D-D1d"/>
@@ -338,7 +338,7 @@
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIR-Dw-FRP">
-                                <rect key="frame" x="197" y="361" width="93" height="26"/>
+                                <rect key="frame" x="197" y="525" width="93" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="34S-54-Gzm"/>
                                     <constraint firstAttribute="height" constant="26" id="KoH-mN-01q"/>
@@ -372,7 +372,7 @@
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-lf-KPB">
-                                <rect key="frame" x="92" y="366" width="40" height="15"/>
+                                <rect key="frame" x="92" y="530" width="40" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="bvl-cd-RyS"/>
                                     <constraint firstAttribute="height" constant="15" id="w6Q-3e-q9g"/>
@@ -406,7 +406,7 @@
                                 </variation>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerImage" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-NP-Up3">
-                                <rect key="frame" x="129.5" y="474" width="61" height="58"/>
+                                <rect key="frame" x="108.33333333333333" y="638" width="197.33333333333337" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Fkv-Pf-iQF">
                                         <variation key="heightClass=regular-widthClass=compact" constant="120"/>
@@ -804,11 +804,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="2oc-ou-dmj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AFK-ZW-KXR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK TO THE OFFICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnu-HF-6Qn">
-                                <rect key="frame" x="32" y="20" width="162" height="17"/>
+                                <rect key="frame" x="32" y="64" width="162" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="L50-8L-g8o"/>
                                     <constraint firstAttribute="height" constant="17" id="lVw-bI-pP3"/>
@@ -841,7 +841,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please verify your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-sy-NzH">
-                                <rect key="frame" x="16" y="263.5" width="288" height="41"/>
+                                <rect key="frame" x="16" y="427.66666666666669" width="382" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="MwW-sU-FkK"/>
                                     <constraint firstAttribute="height" constant="41" id="d2M-Tx-g6Y"/>
@@ -868,7 +868,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your email (tatianaflamme7@gmail.com) to verify that you own this address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-gp-kus">
-                                <rect key="frame" x="11" y="316" width="298" height="50"/>
+                                <rect key="frame" x="58" y="480" width="298" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0UM-Kl-Ppz"/>
                                     <constraint firstAttribute="height" constant="14" id="4hG-qV-Ci6"/>
@@ -907,7 +907,7 @@
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verify" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-o4-Lje">
-                                <rect key="frame" x="73" y="57" width="174" height="162"/>
+                                <rect key="frame" x="120" y="221" width="174" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="3Yk-MG-yKh">
                                         <variation key="heightClass=regular-widthClass=compact" constant="127"/>
@@ -965,7 +965,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't receive an email?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="20a-6e-36k">
-                                <rect key="frame" x="59" y="436" width="128" height="14"/>
+                                <rect key="frame" x="106" y="600" width="128" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="Dze-Zk-mUg"/>
                                     <constraint firstAttribute="height" constant="14" id="VS5-n4-ZAg"/>
@@ -1004,7 +1004,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-bP-jad">
-                                <rect key="frame" x="190" y="438" width="74" height="11"/>
+                                <rect key="frame" x="237" y="602" width="74" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="LVK-4c-nKp"/>
                                     <constraint firstAttribute="height" constant="11" id="aYp-oU-4la"/>
@@ -1219,16 +1219,16 @@
             </objects>
             <point key="canvasLocation" x="301" y="858"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="5Wi-oO-616">
             <objects>
-                <viewController id="kdT-eh-74t" sceneMemberID="viewController">
+                <viewController id="kdT-eh-74t" customClass="RegisterViewController" customModule="BackToTheOffice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MlL-a4-Evo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxu-cY-s2X">
-                                <rect key="frame" x="16" y="80" width="252" height="43"/>
+                                <rect key="frame" x="16" y="124" width="252" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="1f2-sq-fbh"/>
                                     <constraint firstAttribute="height" constant="41" id="g90-Wr-btM"/>
@@ -1254,7 +1254,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="177-sJ-Nfi">
-                                <rect key="frame" x="16" y="248" width="288" height="34"/>
+                                <rect key="frame" x="16" y="292" width="382" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="3AN-4D-btr"/>
                                     <constraint firstAttribute="height" constant="34" id="AO4-1o-dLW"/>
@@ -1298,7 +1298,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOf-5N-Ywc">
-                                <rect key="frame" x="16" y="332" width="288" height="34"/>
+                                <rect key="frame" x="16" y="376" width="382" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="569-S5-kt9"/>
                                     <constraint firstAttribute="height" constant="34" id="5aR-ip-NSV"/>
@@ -1342,7 +1342,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woo-V6-qpj">
-                                <rect key="frame" x="16" y="417" width="288" height="34"/>
+                                <rect key="frame" x="16" y="461" width="382" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="BbC-Tj-V4h"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="XMP-2V-esj"/>
@@ -1386,7 +1386,7 @@
                                 </variation>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-Ok-QDC">
-                                <rect key="frame" x="16" y="292" width="288" height="6"/>
+                                <rect key="frame" x="16" y="336" width="382" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="m93-5h-Bsy"/>
                                 </constraints>
@@ -1402,7 +1402,7 @@
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kY-qq-qfo">
-                                <rect key="frame" x="16" y="464" width="288" height="56"/>
+                                <rect key="frame" x="16" y="758" width="382" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="aVN-vd-uf8"/>
                                 </constraints>
@@ -1417,9 +1417,12 @@
                                         <include reference="aVN-vd-uf8"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="kdT-eh-74t" eventType="touchUpInside" id="dR2-6Z-35j"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueSquare" translatesAutoresizingMaskIntoConstraints="NO" id="YkZ-8W-9f3">
-                                <rect key="frame" x="20" y="495" width="16" height="16"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueSquareClear" translatesAutoresizingMaskIntoConstraints="NO" id="YkZ-8W-9f3">
+                                <rect key="frame" x="20" y="539" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="bLv-RJ-dOX"/>
                                     <constraint firstAttribute="height" constant="16" id="yU8-3N-fQK"/>
@@ -1438,7 +1441,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, I agree to the Back to the Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-bz-SgP">
-                                <rect key="frame" x="46" y="482" width="274" height="18"/>
+                                <rect key="frame" x="46" y="526" width="285.66666666666669" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="TFi-iY-3pd"/>
                                     <constraint firstAttribute="height" constant="14" id="njm-7B-Ba6"/>
@@ -1471,7 +1474,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfH-iH-I1h">
-                                <rect key="frame" x="137" y="504" width="23" height="14"/>
+                                <rect key="frame" x="137" y="548" width="23" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="ENB-2a-bsP"/>
                                     <constraint firstAttribute="height" constant="14" id="HIZ-4s-ZEK"/>
@@ -1504,7 +1507,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-BW-dQk">
-                                <rect key="frame" x="46" y="504" width="85" height="14"/>
+                                <rect key="frame" x="46" y="548" width="85" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="XML-rT-moA"/>
                                 </constraints>
@@ -1522,9 +1525,12 @@
                                         <include reference="XML-rT-moA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="privacyPolicyButtonTapped:" destination="kdT-eh-74t" eventType="touchUpInside" id="j5w-yq-6hS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cua-b2-LIz">
-                                <rect key="frame" x="166" y="504" width="103" height="14"/>
+                                <rect key="frame" x="166" y="548" width="103" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="pDB-j2-As6"/>
                                 </constraints>
@@ -1542,9 +1548,12 @@
                                         <include reference="pDB-j2-As6"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="termsOfServiceButtonTapped:" destination="kdT-eh-74t" eventType="touchUpInside" id="UGi-2m-jZD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="wQG-RT-1vB">
-                                <rect key="frame" x="16" y="376" width="288" height="6"/>
+                                <rect key="frame" x="16" y="420" width="382" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="xxD-ke-3lV"/>
                                 </constraints>
@@ -1560,7 +1569,7 @@
                                 </variation>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="E11-7j-FC4">
-                                <rect key="frame" x="16" y="460" width="288" height="6"/>
+                                <rect key="frame" x="16" y="504" width="382" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="rWn-oO-v9t"/>
                                 </constraints>
@@ -1576,7 +1585,7 @@
                                 </variation>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greyLine" translatesAutoresizingMaskIntoConstraints="NO" id="M5G-tf-sRn">
-                                <rect key="frame" x="16" y="208" width="288" height="6"/>
+                                <rect key="frame" x="16" y="252" width="382" height="6"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="jkW-va-4QB"/>
                                 </constraints>
@@ -1592,7 +1601,7 @@
                                 </variation>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tj4-Zy-sMa">
-                                <rect key="frame" x="16" y="165" width="288" height="34"/>
+                                <rect key="frame" x="16" y="209" width="382" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="aGp-2e-vEd"/>
                                     <constraint firstAttribute="height" constant="34" id="bBp-MK-DiL"/>
@@ -1635,13 +1644,37 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1c-d5-t1r">
+                                <rect key="frame" x="20" y="539" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="dhU-E6-6NX"/>
+                                    <constraint firstAttribute="width" constant="16" id="w5e-hw-RLf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dhU-E6-6NX"/>
+                                        <exclude reference="w5e-hw-RLf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dhU-E6-6NX"/>
+                                        <include reference="w5e-hw-RLf"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="blueSquareButtonTapped:" destination="kdT-eh-74t" eventType="touchUpInside" id="Yyb-pu-Ok9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="x1c-d5-t1r" firstAttribute="centerY" secondItem="YkZ-8W-9f3" secondAttribute="centerY" id="08W-oz-JGw"/>
                             <constraint firstItem="177-sJ-Nfi" firstAttribute="top" secondItem="M5G-tf-sRn" secondAttribute="bottom" constant="34" id="1hq-mW-mSa"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="CF4-Ok-QDC" secondAttribute="trailing" constant="16" id="1ox-3D-Idz"/>
                             <constraint firstItem="E11-7j-FC4" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="3PU-HJ-Ixe"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="bottom" secondItem="8kY-qq-qfo" secondAttribute="bottom" constant="48" id="4FZ-Bj-AoQ"/>
+                            <constraint firstItem="x1c-d5-t1r" firstAttribute="centerX" secondItem="YkZ-8W-9f3" secondAttribute="centerX" id="6aj-I1-ufu"/>
                             <constraint firstItem="kOf-5N-Ywc" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="6bN-4b-pWJ"/>
                             <constraint firstItem="CF4-Ok-QDC" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="94w-nv-sDp"/>
                             <constraint firstItem="M5G-tf-sRn" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="9Br-dx-5aS"/>
@@ -1695,6 +1728,7 @@
                                 <exclude reference="wQG-RT-1vB"/>
                                 <exclude reference="E11-7j-FC4"/>
                                 <exclude reference="M5G-tf-sRn"/>
+                                <exclude reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1ox-3D-Idz"/>
@@ -1734,6 +1768,8 @@
                                 <exclude reference="ZsW-fz-r3S"/>
                                 <exclude reference="Vz4-87-WgS"/>
                                 <exclude reference="dMN-F9-0b7"/>
+                                <exclude reference="08W-oz-JGw"/>
+                                <exclude reference="6aj-I1-ufu"/>
                                 <exclude reference="PHi-de-SgB"/>
                                 <exclude reference="fix-hr-683"/>
                                 <exclude reference="Xqz-Bk-UZv"/>
@@ -1748,6 +1784,7 @@
                                 <include reference="wQG-RT-1vB"/>
                                 <include reference="E11-7j-FC4"/>
                                 <include reference="M5G-tf-sRn"/>
+                                <include reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1ox-3D-Idz"/>
@@ -1787,6 +1824,8 @@
                                 <include reference="ZsW-fz-r3S"/>
                                 <include reference="Vz4-87-WgS"/>
                                 <include reference="dMN-F9-0b7"/>
+                                <include reference="08W-oz-JGw"/>
+                                <include reference="6aj-I1-ufu"/>
                                 <include reference="PHi-de-SgB"/>
                                 <include reference="fix-hr-683"/>
                                 <include reference="Xqz-Bk-UZv"/>
@@ -1797,18 +1836,28 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="EmailTF" destination="kOf-5N-Ywc" id="gSA-yZ-2vj"/>
+                        <outlet property="blueSquareImage" destination="YkZ-8W-9f3" id="cLO-ac-KjD"/>
+                        <outlet property="createAccountButtonBottomConstraint" destination="4FZ-Bj-AoQ" id="j4L-4E-JdG"/>
+                        <outlet property="createAccountTopConstraint" destination="CBe-e0-N1t" id="ktI-LU-4f9"/>
+                        <outlet property="firstNameTF" destination="tj4-Zy-sMa" id="mX5-nf-1Yg"/>
+                        <outlet property="iAgreeLabel" destination="VgL-bz-SgP" id="8NL-Mz-og2"/>
+                        <outlet property="lastNameTF" destination="177-sJ-Nfi" id="NZx-ld-0y5"/>
+                        <outlet property="passwordTF" destination="woo-V6-qpj" id="Eg0-gH-BFq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUA-0C-9PI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-517.39130434782612" y="101.78571428571428"/>
+            <point key="canvasLocation" x="-517.39130434782612" y="40.848214285714285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="blueSquare" width="40" height="40"/>
-        <image name="createAccountButton" width="500" height="74.5"/>
-        <image name="greyLine" width="400" height="2"/>
-        <image name="registerButton" width="300" height="39.5"/>
-        <image name="registerImage" width="400" height="333.5"/>
-        <image name="verify" width="400" height="333.5"/>
+        <image name="blueSquareClear" width="40" height="40"/>
+        <image name="createAccountButton" width="500" height="74.666664123535156"/>
+        <image name="greyLine" width="489.66665649414062" height="2.3333332538604736"/>
+        <image name="registerButton" width="300" height="39.333332061767578"/>
+        <image name="registerImage" width="400" height="333.66665649414062"/>
+        <image name="verify" width="400" height="333.66665649414062"/>
     </resources>
 </document>
