@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var lastNameTF: UITextField!
     
-    @IBOutlet weak var EmailTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
     
@@ -31,6 +31,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameTF.delegate = self
+        lastNameTF.delegate = self
+        emailTF.delegate = self
+        passwordTF.delegate = self
         
         //Меняем значения некоторых констрейнтов, если приложение запущено на Айфоне SE, 5, 5S
         if UIScreen.main.bounds.height == 568.0 {
@@ -68,7 +73,21 @@ class RegisterViewController: UIViewController {
     @IBAction func createAccountButtonTapped(_ sender: UIButton) {
     }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+    }
 
+    
+    
+    
+    
 }
 
+extension RegisterViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+}

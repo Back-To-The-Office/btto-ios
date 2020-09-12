@@ -1264,7 +1264,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1308,7 +1308,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1352,7 +1352,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1611,7 +1611,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1731,6 +1731,8 @@
                                 <exclude reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="9Br-dx-5aS"/>
+                                <exclude reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1ox-3D-Idz"/>
                                 <exclude reference="4FZ-Bj-AoQ"/>
                                 <exclude reference="9nn-4g-pXz"/>
@@ -1749,27 +1751,13 @@
                                 <exclude reference="goh-3J-mWi"/>
                                 <exclude reference="CuA-Ub-sBZ"/>
                                 <exclude reference="nNE-an-C6v"/>
-                                <exclude reference="9Br-dx-5aS"/>
-                                <exclude reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1hq-mW-mSa"/>
                                 <exclude reference="Wzx-2t-xgm"/>
                                 <exclude reference="94w-nv-sDp"/>
-                                <exclude reference="QNr-iO-x3k"/>
-                                <exclude reference="h2S-7Y-L9Z"/>
-                                <exclude reference="6bN-4b-pWJ"/>
-                                <exclude reference="Br0-7S-3JC"/>
-                                <exclude reference="GbQ-93-BaZ"/>
-                                <exclude reference="WHa-Wf-1bY"/>
-                                <exclude reference="AOZ-4y-lRe"/>
-                                <exclude reference="jZ7-vJ-gr7"/>
-                                <exclude reference="3PU-HJ-Ixe"/>
-                                <exclude reference="oJx-gI-BGm"/>
                                 <exclude reference="Xcp-Or-06m"/>
                                 <exclude reference="ZsW-fz-r3S"/>
                                 <exclude reference="Vz4-87-WgS"/>
                                 <exclude reference="dMN-F9-0b7"/>
-                                <exclude reference="08W-oz-JGw"/>
-                                <exclude reference="6aj-I1-ufu"/>
                                 <exclude reference="PHi-de-SgB"/>
                                 <exclude reference="fix-hr-683"/>
                                 <exclude reference="Xqz-Bk-UZv"/>
@@ -1777,6 +1765,18 @@
                                 <exclude reference="FEo-wE-YpD"/>
                                 <exclude reference="W6Y-5P-rcA"/>
                                 <exclude reference="Dkm-kz-orf"/>
+                                <exclude reference="GbQ-93-BaZ"/>
+                                <exclude reference="WHa-Wf-1bY"/>
+                                <exclude reference="08W-oz-JGw"/>
+                                <exclude reference="6aj-I1-ufu"/>
+                                <exclude reference="QNr-iO-x3k"/>
+                                <exclude reference="h2S-7Y-L9Z"/>
+                                <exclude reference="6bN-4b-pWJ"/>
+                                <exclude reference="Br0-7S-3JC"/>
+                                <exclude reference="AOZ-4y-lRe"/>
+                                <exclude reference="jZ7-vJ-gr7"/>
+                                <exclude reference="3PU-HJ-Ixe"/>
+                                <exclude reference="oJx-gI-BGm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1787,6 +1787,8 @@
                                 <include reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="9Br-dx-5aS"/>
+                                <include reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1ox-3D-Idz"/>
                                 <include reference="4FZ-Bj-AoQ"/>
                                 <include reference="9nn-4g-pXz"/>
@@ -1805,27 +1807,13 @@
                                 <include reference="goh-3J-mWi"/>
                                 <include reference="CuA-Ub-sBZ"/>
                                 <include reference="nNE-an-C6v"/>
-                                <include reference="9Br-dx-5aS"/>
-                                <include reference="LyQ-Uz-RJD"/>
                                 <include reference="1hq-mW-mSa"/>
                                 <include reference="Wzx-2t-xgm"/>
                                 <exclude reference="94w-nv-sDp"/>
-                                <include reference="QNr-iO-x3k"/>
-                                <include reference="h2S-7Y-L9Z"/>
-                                <include reference="6bN-4b-pWJ"/>
-                                <include reference="Br0-7S-3JC"/>
-                                <include reference="GbQ-93-BaZ"/>
-                                <include reference="WHa-Wf-1bY"/>
-                                <include reference="AOZ-4y-lRe"/>
-                                <include reference="jZ7-vJ-gr7"/>
-                                <include reference="3PU-HJ-Ixe"/>
-                                <include reference="oJx-gI-BGm"/>
                                 <include reference="Xcp-Or-06m"/>
                                 <include reference="ZsW-fz-r3S"/>
                                 <include reference="Vz4-87-WgS"/>
                                 <include reference="dMN-F9-0b7"/>
-                                <include reference="08W-oz-JGw"/>
-                                <include reference="6aj-I1-ufu"/>
                                 <include reference="PHi-de-SgB"/>
                                 <include reference="fix-hr-683"/>
                                 <include reference="Xqz-Bk-UZv"/>
@@ -1833,14 +1821,26 @@
                                 <include reference="FEo-wE-YpD"/>
                                 <include reference="W6Y-5P-rcA"/>
                                 <include reference="Dkm-kz-orf"/>
+                                <include reference="GbQ-93-BaZ"/>
+                                <include reference="WHa-Wf-1bY"/>
+                                <include reference="08W-oz-JGw"/>
+                                <include reference="6aj-I1-ufu"/>
+                                <include reference="QNr-iO-x3k"/>
+                                <include reference="h2S-7Y-L9Z"/>
+                                <include reference="6bN-4b-pWJ"/>
+                                <include reference="Br0-7S-3JC"/>
+                                <include reference="AOZ-4y-lRe"/>
+                                <include reference="jZ7-vJ-gr7"/>
+                                <include reference="3PU-HJ-Ixe"/>
+                                <include reference="oJx-gI-BGm"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="EmailTF" destination="kOf-5N-Ywc" id="gSA-yZ-2vj"/>
                         <outlet property="blueSquareImage" destination="YkZ-8W-9f3" id="cLO-ac-KjD"/>
                         <outlet property="createAccountButtonBottomConstraint" destination="4FZ-Bj-AoQ" id="j4L-4E-JdG"/>
                         <outlet property="createAccountTopConstraint" destination="CBe-e0-N1t" id="ktI-LU-4f9"/>
+                        <outlet property="emailTF" destination="kOf-5N-Ywc" id="gSA-yZ-2vj"/>
                         <outlet property="firstNameTF" destination="tj4-Zy-sMa" id="mX5-nf-1Yg"/>
                         <outlet property="iAgreeLabel" destination="VgL-bz-SgP" id="8NL-Mz-og2"/>
                         <outlet property="lastNameTF" destination="177-sJ-Nfi" id="NZx-ld-0y5"/>
