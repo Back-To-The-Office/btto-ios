@@ -66,11 +66,18 @@ class RegisterViewController: UIViewController {
             blueSquareImage.image = UIImage(named: "blueSquareClear")
         }
         
-        
-        
     }
     
     @IBAction func createAccountButtonTapped(_ sender: UIButton) {
+        
+        guard let firstName = firstNameTF.text, let lastName = lastNameTF.text, let email = emailTF.text, let password = passwordTF.text, firstName != "", lastName != "", email != "", password != "" else {
+            showErrorMessage(title: "Пожалуйста, заполните все поля!", message: "bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla")
+            return
+        }
+        guard blueSquareIsMarked == true else {
+            showErrorMessage(title: "Поставь галку в синий квадрат!", message: "bla-bla-bla-bla-bla Если умеешь читать, прочитай наши условия и политику безопасности")
+            return
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,7 +85,17 @@ class RegisterViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    
+    private func showErrorMessage (title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let oKAction = UIAlertAction (title: "Ок", style: .default) { action in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(oKAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
     
     
