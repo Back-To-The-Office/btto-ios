@@ -10,10 +10,14 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    var doesTheScreeenHaveAMonobrow = true
+    
     var blueSquareIsMarked = false
     
+    //Сюда сохраняем первоначальное значение одной из констрейнт (значение этого констрейнта меняется при выдвижении клавиатуры)
+    var saveCreateAccountLabelTopConstraintValue: CGFloat!
     
-    @IBOutlet weak var createAccountTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var createAccountLabelTopConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var createAccountButtonBottomConstraint: NSLayoutConstraint!
     
@@ -37,15 +41,22 @@ class RegisterViewController: UIViewController {
         emailTF.delegate = self
         passwordTF.delegate = self
         
-        //Меняем значения некоторых констрейнтов, если приложение запущено на Айфоне SE, 5, 5S
-        if UIScreen.main.bounds.height == 568.0 {
-           print("Айфон SE детектед")
+        //Меняем значения некоторых констрейнтов, в зависимости от модели айфона
+        switch UIScreen.main.bounds.height {
+        case 667, 736:
+            print("Айфон 6,7,8,SE 2-gen, 6 Plus, 7 Plus, 8 Plus")
             
-            createAccountTopConstraint.constant = 10
-            createAccountButtonBottomConstraint.constant = 10
-            iAgreeLabel.text = "By signing up, I agree to the application"
+            createAccountLabelTopConstraint.constant = 60
+            createAccountButtonBottomConstraint.constant = 30
+            
+            saveCreateAccountLabelTopConstraintValue = createAccountLabelTopConstraint.constant
+            
+            doesTheScreeenHaveAMonobrow = false
+        default:
+            saveCreateAccountLabelTopConstraintValue = createAccountLabelTopConstraint.constant
         }
-        
+       
+        //Что бы клавиатура не закрывала текстовые поля - реализуем скролл
        NotificationCenter.default.addObserver(self, selector: #selector(kbShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbHide), name: UIResponder.keyboardDidHideNotification, object: nil)
@@ -104,12 +115,19 @@ class RegisterViewController: UIViewController {
         let kbSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         
         (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height + kbSize.height)
-        
-        
+        if doesTheScreeenHaveAMonobrow {
+            self.createAccountLabelTopConstraint.constant = 76
+        } else {
+            self.createAccountLabelTopConstraint.constant = 40
+        }
+       
         (self.view as! UIScrollView).scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
     }
     @objc func kbHide (notification: Notification) {
         (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+        
+        self.createAccountLabelTopConstraint.constant = self.saveCreateAccountLabelTopConstraintValue
+        
     }
     
     
