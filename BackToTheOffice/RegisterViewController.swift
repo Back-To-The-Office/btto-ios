@@ -46,6 +46,9 @@ class RegisterViewController: UIViewController {
             iAgreeLabel.text = "By signing up, I agree to the application"
         }
         
+       NotificationCenter.default.addObserver(self, selector: #selector(kbShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(kbHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
         
     }
@@ -96,7 +99,18 @@ class RegisterViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
+    @objc func kbShow (notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        let kbSize = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height + kbSize.height)
+        
+        
+        (self.view as! UIScrollView).scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
+    }
+    @objc func kbHide (notification: Notification) {
+        (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+    }
     
     
 }

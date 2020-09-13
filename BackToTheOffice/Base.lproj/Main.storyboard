@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdT-eh-74t">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, I agree to the Back to the Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-gE-jzb">
-                                <rect key="frame" x="92.000000000000014" y="513" width="247.33333333333337" height="14"/>
+                                <rect key="frame" x="92" y="513" width="247.5" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="1cB-hL-08g"/>
                                     <constraint firstAttribute="height" constant="14" id="4O9-St-r3m"/>
@@ -406,7 +406,7 @@
                                 </variation>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerImage" translatesAutoresizingMaskIntoConstraints="NO" id="hhf-NP-Up3">
-                                <rect key="frame" x="108.33333333333333" y="638" width="197.33333333333337" height="188"/>
+                                <rect key="frame" x="108.5" y="638" width="197" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Fkv-Pf-iQF">
                                         <variation key="heightClass=regular-widthClass=compact" constant="120"/>
@@ -841,7 +841,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please verify your email address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-sy-NzH">
-                                <rect key="frame" x="16" y="427.66666666666669" width="382" height="41"/>
+                                <rect key="frame" x="16" y="427.5" width="382" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="MwW-sU-FkK"/>
                                     <constraint firstAttribute="height" constant="41" id="d2M-Tx-g6Y"/>
@@ -1223,12 +1223,12 @@
         <scene sceneID="5Wi-oO-616">
             <objects>
                 <viewController id="kdT-eh-74t" customClass="RegisterViewController" customModule="BackToTheOffice" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MlL-a4-Evo">
+                    <view key="view" contentMode="scaleToFill" id="MlL-a4-Evo" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxu-cY-s2X">
-                                <rect key="frame" x="16" y="124" width="252" height="43"/>
+                                <rect key="frame" x="16" y="124" width="247" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="1f2-sq-fbh"/>
                                     <constraint firstAttribute="height" constant="41" id="g90-Wr-btM"/>
@@ -1264,7 +1264,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1308,7 +1308,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1352,7 +1352,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1442,7 +1442,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, I agree to the Back to the Office" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-bz-SgP">
-                                <rect key="frame" x="46" y="526" width="285.66666666666669" height="18"/>
+                                <rect key="frame" x="46" y="526" width="271.5" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="TFi-iY-3pd"/>
                                     <constraint firstAttribute="height" constant="14" id="njm-7B-Ba6"/>
@@ -1475,7 +1475,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfH-iH-I1h">
-                                <rect key="frame" x="137" y="548" width="23" height="14"/>
+                                <rect key="frame" x="134" y="548" width="22" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="ENB-2a-bsP"/>
                                     <constraint firstAttribute="height" constant="14" id="HIZ-4s-ZEK"/>
@@ -1508,7 +1508,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hl-BW-dQk">
-                                <rect key="frame" x="46" y="548" width="85" height="14"/>
+                                <rect key="frame" x="46" y="548" width="82" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="XML-rT-moA"/>
                                 </constraints>
@@ -1532,7 +1532,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cua-b2-LIz">
-                                <rect key="frame" x="166" y="548" width="103" height="14"/>
+                                <rect key="frame" x="162" y="548" width="97" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="pDB-j2-As6"/>
                                 </constraints>
@@ -1614,7 +1614,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1676,7 +1676,6 @@
                             <constraint firstItem="177-sJ-Nfi" firstAttribute="top" secondItem="M5G-tf-sRn" secondAttribute="bottom" constant="34" id="1hq-mW-mSa"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="CF4-Ok-QDC" secondAttribute="trailing" constant="16" id="1ox-3D-Idz"/>
                             <constraint firstItem="E11-7j-FC4" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="3PU-HJ-Ixe"/>
-                            <constraint firstItem="HhD-OC-LRl" firstAttribute="bottom" secondItem="8kY-qq-qfo" secondAttribute="bottom" constant="48" id="4FZ-Bj-AoQ"/>
                             <constraint firstItem="x1c-d5-t1r" firstAttribute="centerX" secondItem="YkZ-8W-9f3" secondAttribute="centerX" id="6aj-I1-ufu"/>
                             <constraint firstItem="kOf-5N-Ywc" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="6bN-4b-pWJ"/>
                             <constraint firstItem="CF4-Ok-QDC" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="94w-nv-sDp"/>
@@ -1684,7 +1683,6 @@
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cua-b2-LIz" secondAttribute="trailing" symbolic="YES" id="9nn-4g-pXz"/>
                             <constraint firstItem="woo-V6-qpj" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="AOZ-4y-lRe"/>
                             <constraint firstItem="kOf-5N-Ywc" firstAttribute="top" secondItem="CF4-Ok-QDC" secondAttribute="bottom" constant="34" id="Br0-7S-3JC"/>
-                            <constraint firstItem="Sxu-cY-s2X" firstAttribute="top" secondItem="HhD-OC-LRl" secondAttribute="top" constant="80" id="CBe-e0-N1t"/>
                             <constraint firstItem="tj4-Zy-sMa" firstAttribute="top" secondItem="Sxu-cY-s2X" secondAttribute="bottom" constant="42" id="CuA-Ub-sBZ"/>
                             <constraint firstItem="8kY-qq-qfo" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="Dkm-kz-orf"/>
                             <constraint firstItem="cua-b2-LIz" firstAttribute="leading" secondItem="OfH-iH-I1h" secondAttribute="trailing" constant="2" id="FEo-wE-YpD">
@@ -1719,11 +1717,15 @@
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VgL-bz-SgP" secondAttribute="trailing" symbolic="YES" id="h8i-AD-3KZ"/>
                             <constraint firstItem="woo-V6-qpj" firstAttribute="top" secondItem="wQG-RT-1vB" secondAttribute="bottom" constant="35" id="jZ7-vJ-gr7"/>
                             <constraint firstItem="tj4-Zy-sMa" firstAttribute="leading" secondItem="HhD-OC-LRl" secondAttribute="leading" constant="16" id="nNE-an-C6v"/>
+                            <constraint firstItem="Sxu-cY-s2X" firstAttribute="top" secondItem="MlL-a4-Evo" secondAttribute="top" constant="80" id="npS-Dv-6gT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="124"/>
+                            </constraint>
                             <constraint firstItem="E11-7j-FC4" firstAttribute="top" secondItem="woo-V6-qpj" secondAttribute="bottom" constant="9" id="oJx-gI-BGm"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="8kY-qq-qfo" secondAttribute="trailing" constant="16" id="p33-n7-9Vu"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="M5G-tf-sRn" secondAttribute="trailing" constant="16" id="pVV-C7-yJF"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="CF4-Ok-QDC" secondAttribute="trailing" constant="16" id="rXo-13-Rq3"/>
                             <constraint firstItem="HhD-OC-LRl" firstAttribute="trailing" secondItem="E11-7j-FC4" secondAttribute="trailing" constant="16" id="ueH-eK-cqt"/>
+                            <constraint firstItem="8kY-qq-qfo" firstAttribute="top" secondItem="8hl-BW-dQk" secondAttribute="bottom" constant="196" id="yvN-kC-Sf7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HhD-OC-LRl"/>
                         <variation key="default">
@@ -1734,10 +1736,7 @@
                                 <exclude reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="9Br-dx-5aS"/>
-                                <exclude reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1ox-3D-Idz"/>
-                                <exclude reference="4FZ-Bj-AoQ"/>
                                 <exclude reference="9nn-4g-pXz"/>
                                 <exclude reference="K2G-tT-vgF"/>
                                 <exclude reference="K7o-ob-4Ib"/>
@@ -1750,17 +1749,31 @@
                                 <exclude reference="pVV-C7-yJF"/>
                                 <exclude reference="rXo-13-Rq3"/>
                                 <exclude reference="ueH-eK-cqt"/>
-                                <exclude reference="CBe-e0-N1t"/>
                                 <exclude reference="goh-3J-mWi"/>
+                                <exclude reference="npS-Dv-6gT"/>
                                 <exclude reference="CuA-Ub-sBZ"/>
                                 <exclude reference="nNE-an-C6v"/>
+                                <exclude reference="9Br-dx-5aS"/>
+                                <exclude reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1hq-mW-mSa"/>
                                 <exclude reference="Wzx-2t-xgm"/>
                                 <exclude reference="94w-nv-sDp"/>
+                                <exclude reference="QNr-iO-x3k"/>
+                                <exclude reference="h2S-7Y-L9Z"/>
+                                <exclude reference="6bN-4b-pWJ"/>
+                                <exclude reference="Br0-7S-3JC"/>
+                                <exclude reference="GbQ-93-BaZ"/>
+                                <exclude reference="WHa-Wf-1bY"/>
+                                <exclude reference="AOZ-4y-lRe"/>
+                                <exclude reference="jZ7-vJ-gr7"/>
+                                <exclude reference="3PU-HJ-Ixe"/>
+                                <exclude reference="oJx-gI-BGm"/>
                                 <exclude reference="Xcp-Or-06m"/>
                                 <exclude reference="ZsW-fz-r3S"/>
                                 <exclude reference="Vz4-87-WgS"/>
                                 <exclude reference="dMN-F9-0b7"/>
+                                <exclude reference="08W-oz-JGw"/>
+                                <exclude reference="6aj-I1-ufu"/>
                                 <exclude reference="PHi-de-SgB"/>
                                 <exclude reference="fix-hr-683"/>
                                 <exclude reference="Xqz-Bk-UZv"/>
@@ -1768,18 +1781,7 @@
                                 <exclude reference="FEo-wE-YpD"/>
                                 <exclude reference="W6Y-5P-rcA"/>
                                 <exclude reference="Dkm-kz-orf"/>
-                                <exclude reference="GbQ-93-BaZ"/>
-                                <exclude reference="WHa-Wf-1bY"/>
-                                <exclude reference="08W-oz-JGw"/>
-                                <exclude reference="6aj-I1-ufu"/>
-                                <exclude reference="QNr-iO-x3k"/>
-                                <exclude reference="h2S-7Y-L9Z"/>
-                                <exclude reference="6bN-4b-pWJ"/>
-                                <exclude reference="Br0-7S-3JC"/>
-                                <exclude reference="AOZ-4y-lRe"/>
-                                <exclude reference="jZ7-vJ-gr7"/>
-                                <exclude reference="3PU-HJ-Ixe"/>
-                                <exclude reference="oJx-gI-BGm"/>
+                                <exclude reference="yvN-kC-Sf7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1790,10 +1792,7 @@
                                 <include reference="x1c-d5-t1r"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="9Br-dx-5aS"/>
-                                <include reference="LyQ-Uz-RJD"/>
                                 <exclude reference="1ox-3D-Idz"/>
-                                <include reference="4FZ-Bj-AoQ"/>
                                 <include reference="9nn-4g-pXz"/>
                                 <include reference="K2G-tT-vgF"/>
                                 <include reference="K7o-ob-4Ib"/>
@@ -1806,17 +1805,31 @@
                                 <include reference="pVV-C7-yJF"/>
                                 <include reference="rXo-13-Rq3"/>
                                 <include reference="ueH-eK-cqt"/>
-                                <include reference="CBe-e0-N1t"/>
                                 <include reference="goh-3J-mWi"/>
+                                <include reference="npS-Dv-6gT"/>
                                 <include reference="CuA-Ub-sBZ"/>
                                 <include reference="nNE-an-C6v"/>
+                                <include reference="9Br-dx-5aS"/>
+                                <include reference="LyQ-Uz-RJD"/>
                                 <include reference="1hq-mW-mSa"/>
                                 <include reference="Wzx-2t-xgm"/>
                                 <exclude reference="94w-nv-sDp"/>
+                                <include reference="QNr-iO-x3k"/>
+                                <include reference="h2S-7Y-L9Z"/>
+                                <include reference="6bN-4b-pWJ"/>
+                                <include reference="Br0-7S-3JC"/>
+                                <include reference="GbQ-93-BaZ"/>
+                                <include reference="WHa-Wf-1bY"/>
+                                <include reference="AOZ-4y-lRe"/>
+                                <include reference="jZ7-vJ-gr7"/>
+                                <include reference="3PU-HJ-Ixe"/>
+                                <include reference="oJx-gI-BGm"/>
                                 <include reference="Xcp-Or-06m"/>
                                 <include reference="ZsW-fz-r3S"/>
                                 <include reference="Vz4-87-WgS"/>
                                 <include reference="dMN-F9-0b7"/>
+                                <include reference="08W-oz-JGw"/>
+                                <include reference="6aj-I1-ufu"/>
                                 <include reference="PHi-de-SgB"/>
                                 <include reference="fix-hr-683"/>
                                 <include reference="Xqz-Bk-UZv"/>
@@ -1824,25 +1837,12 @@
                                 <include reference="FEo-wE-YpD"/>
                                 <include reference="W6Y-5P-rcA"/>
                                 <include reference="Dkm-kz-orf"/>
-                                <include reference="GbQ-93-BaZ"/>
-                                <include reference="WHa-Wf-1bY"/>
-                                <include reference="08W-oz-JGw"/>
-                                <include reference="6aj-I1-ufu"/>
-                                <include reference="QNr-iO-x3k"/>
-                                <include reference="h2S-7Y-L9Z"/>
-                                <include reference="6bN-4b-pWJ"/>
-                                <include reference="Br0-7S-3JC"/>
-                                <include reference="AOZ-4y-lRe"/>
-                                <include reference="jZ7-vJ-gr7"/>
-                                <include reference="3PU-HJ-Ixe"/>
-                                <include reference="oJx-gI-BGm"/>
+                                <include reference="yvN-kC-Sf7"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="blueSquareImage" destination="YkZ-8W-9f3" id="cLO-ac-KjD"/>
-                        <outlet property="createAccountButtonBottomConstraint" destination="4FZ-Bj-AoQ" id="j4L-4E-JdG"/>
-                        <outlet property="createAccountTopConstraint" destination="CBe-e0-N1t" id="ktI-LU-4f9"/>
                         <outlet property="emailTF" destination="kOf-5N-Ywc" id="gSA-yZ-2vj"/>
                         <outlet property="firstNameTF" destination="tj4-Zy-sMa" id="mX5-nf-1Yg"/>
                         <outlet property="iAgreeLabel" destination="VgL-bz-SgP" id="8NL-Mz-og2"/>
@@ -1865,7 +1865,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="36S-nu-CoP">
                                 <rect key="frame" x="20" y="102" width="374" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1909,7 +1909,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b6U-sr-BML">
                                 <rect key="frame" x="20" y="102" width="374" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.   Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.   Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Политика безопасности                                                   Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1986,10 +1986,10 @@
     </scenes>
     <resources>
         <image name="blueSquareClear" width="40" height="40"/>
-        <image name="createAccountButton" width="500" height="74.666664123535156"/>
-        <image name="greyLine" width="489.66665649414062" height="2.3333332538604736"/>
-        <image name="registerButton" width="300" height="39.333332061767578"/>
-        <image name="registerImage" width="400" height="333.66665649414062"/>
-        <image name="verify" width="400" height="333.66665649414062"/>
+        <image name="createAccountButton" width="500" height="74.5"/>
+        <image name="greyLine" width="400" height="2"/>
+        <image name="registerButton" width="300" height="39.5"/>
+        <image name="registerImage" width="400" height="333.5"/>
+        <image name="verify" width="400" height="333.5"/>
     </resources>
 </document>
