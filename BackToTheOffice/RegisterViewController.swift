@@ -14,11 +14,18 @@ class RegisterViewController: UIViewController {
     
     var blueSquareIsMarked = false
     
+    var allTimeZones:[String] {
+        return TimeZone.knownTimeZoneIdentifiers
+    }
+    
+    var pickerViewSelectedElement: String?
+    
     //Сюда сохраняем первоначальное значение одной из констрейнт (значение этого констрейнта меняется при выдвижении клавиатуры)
     var saveCreateAccountLabelTopConstraintValue: CGFloat!
     
-    @IBOutlet weak var createAccountLabelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backToTheOfficeLabelTopConstraint: NSLayoutConstraint!
 
+    @IBOutlet weak var backToTheOfficeLabelBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var createAccountButtonBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var firstNameTF: UITextField!
@@ -28,6 +35,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
+    
+    @IBOutlet weak var timeZoneTF: UITextField!
     
     @IBOutlet weak var blueSquareImage: UIImageView!
     
@@ -40,30 +49,50 @@ class RegisterViewController: UIViewController {
         lastNameTF.delegate = self
         emailTF.delegate = self
         passwordTF.delegate = self
+        timeZoneTF.delegate = self
+        
+        
+        
+        let timeZone = TimeZone.current.identifier
+        
+        timeZoneTF.text = "Your timezone: \(timeZone)"
+        
+        choisePickerViewElement()
+        createPickerViewToolbar()
         
         //Меняем значения некоторых констрейнтов, в зависимости от модели айфона
         switch UIScreen.main.bounds.height {
-        case 667, 736:
-            print("Айфон 6,7,8,SE 2-gen, 6 Plus, 7 Plus, 8 Plus")
+        case 667:
+            print("6,7,8,SE 2-gen")
             
-            createAccountLabelTopConstraint.constant = 60
-            createAccountButtonBottomConstraint.constant = 30
+            backToTheOfficeLabelTopConstraint.constant = 20
+            backToTheOfficeLabelBottomConstraint.constant = 10
+            createAccountButtonBottomConstraint.constant = 10
             
-            saveCreateAccountLabelTopConstraintValue = createAccountLabelTopConstraint.constant
+            saveCreateAccountLabelTopConstraintValue = backToTheOfficeLabelTopConstraint.constant
+            
+            doesTheScreeenHaveAMonobrow = false
+        case 736:
+            print("6 Plus, 7 Plus, 8 Plus")
+            
+            backToTheOfficeLabelTopConstraint.constant = 40
+            createAccountButtonBottomConstraint.constant = 20
+            
+            saveCreateAccountLabelTopConstraintValue = backToTheOfficeLabelTopConstraint.constant
             
             doesTheScreeenHaveAMonobrow = false
         default:
-            saveCreateAccountLabelTopConstraintValue = createAccountLabelTopConstraint.constant
+            saveCreateAccountLabelTopConstraintValue = backToTheOfficeLabelTopConstraint.constant
         }
-       
+        
         //Что бы клавиатура не закрывала текстовые поля - реализуем скролл
-       NotificationCenter.default.addObserver(self, selector: #selector(kbShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(kbHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
         
     }
-
+    
     @IBAction func privacyPolicyButtonTapped(_ sender: UIButton) {
     }
     
@@ -155,9 +184,9 @@ class RegisterViewController: UIViewController {
         
         (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height + kbSize.height)
         if doesTheScreeenHaveAMonobrow {
-            self.createAccountLabelTopConstraint.constant = 76
+            self.backToTheOfficeLabelTopConstraint.constant = 15
         } else {
-            self.createAccountLabelTopConstraint.constant = 40
+            self.backToTheOfficeLabelTopConstraint.constant = 0
         }
        
         (self.view as! UIScrollView).scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.height, right: 0)
@@ -165,17 +194,68 @@ class RegisterViewController: UIViewController {
     @objc func kbHide (notification: Notification) {
         (self.view as! UIScrollView).contentSize = CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
         
-        self.createAccountLabelTopConstraint.constant = self.saveCreateAccountLabelTopConstraintValue
+        self.backToTheOfficeLabelTopConstraint.constant = self.saveCreateAccountLabelTopConstraintValue
         
     }
-    
-    
+    private func choisePickerViewElement () {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+      
+        timeZoneTF.inputView = pickerView
+    }
+    private func createPickerViewToolbar () {
+        let pickerViewToolbar = UIToolbar()
+        pickerViewToolbar.sizeToFit()
+        
+        let okButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        
+        
+        pickerViewToolbar.setItems([okButton], animated: true)
+        
+        pickerViewToolbar.isUserInteractionEnabled = true
+        
+       pickerViewToolbar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+      pickerViewToolbar.tintColor = #colorLiteral(red: 0, green: 0.4877254367, blue: 1, alpha: 1)
+        
+        timeZoneTF.inputAccessoryView = pickerViewToolbar
+        
+    }
+    @objc func dismissKeyboard () {
+        view.endEditing(true)
+    }
 }
 
 extension RegisterViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == timeZoneTF {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
         return true
+    }
+    
+}
+
+extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return allTimeZones.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return allTimeZones[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerViewSelectedElement = allTimeZones[row]
+        timeZoneTF.text = "Your timezone: \(pickerViewSelectedElement!)"
     }
 }
