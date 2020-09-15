@@ -92,6 +92,45 @@ class RegisterViewController: UIViewController {
             showErrorMessage(title: "Поставь галку в синий квадрат!", message: "bla-bla-bla-bla-bla Если умеешь читать, прочитай наши условия и политику безопасности")
             return
         }
+        // Делаем POST запрос на регистрацию пользователя
+        let urlString = "https://btto-back.herokuapp.com/api/v1/users/register"
+        guard let url = URL(string: urlString) else {
+            print("Неверный url")
+            return
+        }
+        let parameters = ["email": email,
+                          "firstName": firstName,
+                          "lastName": lastName,
+                          "password": password]
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else {
+            print("В теле запроса не создался JSON c параметрами")
+            return
+        }
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) { data, response, error in
+            if let response = response {
+                print(response)
+            }
+            guard let data = data else {
+                print("В ответе нет данных")
+                return
+            }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print (json)
+            } catch {
+                print (error.localizedDescription)
+            }
+        }.resume()
+        
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

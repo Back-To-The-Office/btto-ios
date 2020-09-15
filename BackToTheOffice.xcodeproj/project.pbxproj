@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0148E4250FFF6E0025451E /* LoginViewController.swift */; };
 		4DC6F76D2508ED9200F36588 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */; };
 		4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */; };
 		4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852425027E9C0063066A /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0148E4250FFF6E0025451E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		4DCB852125027E9C0063066A /* BackToTheOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToTheOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 				4DCB852425027E9C0063066A /* AppDelegate.swift */,
 				4DCB852625027E9C0063066A /* SceneDelegate.swift */,
 				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
+				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
 				4DCB852D25027EA20063066A /* Assets.xcassets */,
 				4DCB852F25027EA20063066A /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
