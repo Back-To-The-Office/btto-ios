@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
         return TimeZone.knownTimeZoneIdentifiers
     }
     
+    var currentTimeZone: String?
     var pickerViewSelectedElement: String?
     
     //Сюда сохраняем первоначальное значение одной из констрейнт (значение этого констрейнта меняется при выдвижении клавиатуры)
@@ -28,6 +29,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var backToTheOfficeLabelBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var createAccountButtonBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var firstNameLine: UIImageView!
+    
+    @IBOutlet weak var lastNameLine: UIImageView!
+    
+    @IBOutlet weak var emailLine: UIImageView!
+    
+    @IBOutlet weak var passwordLine: UIImageView!
+    
     @IBOutlet weak var firstNameTF: UITextField!
     
     @IBOutlet weak var lastNameTF: UITextField!
@@ -37,6 +46,14 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     
     @IBOutlet weak var timeZoneTF: UITextField!
+    
+    @IBOutlet weak var firstNameSmallLabel: UILabel!
+    
+    @IBOutlet weak var lastNameSmallLabel: UILabel!
+    
+    @IBOutlet weak var emailSmallLabel: UILabel!
+    
+    @IBOutlet weak var passwordSmallLabel: UILabel!
     
     @IBOutlet weak var blueSquareImage: UIImageView!
     
@@ -51,11 +68,14 @@ class RegisterViewController: UIViewController {
         passwordTF.delegate = self
         timeZoneTF.delegate = self
         
+        firstNameSmallLabel.isHidden = true
+        lastNameSmallLabel.isHidden = true
+        emailSmallLabel.isHidden = true
+        passwordSmallLabel.isHidden = true
         
+        currentTimeZone = TimeZone.current.identifier
         
-        let timeZone = TimeZone.current.identifier
-        
-        timeZoneTF.text = "Your timezone: \(timeZone)"
+        timeZoneTF.text = "Your timezone: \(currentTimeZone!)"
         
         choisePickerViewElement()
         createPickerViewToolbar()
@@ -200,7 +220,22 @@ class RegisterViewController: UIViewController {
     private func choisePickerViewElement () {
         let pickerView = UIPickerView()
         pickerView.delegate = self
-      
+        
+//        Узнаем индекс определенного автоматически часового пояса в массиве всех часовых поясов.
+//        Этот индекс нужен нам, что бы в pickerView, выбор стоял на соответствующем поле
+        
+        var currentIndex = -1
+        
+        for timezone in allTimeZones {
+            if timezone != currentTimeZone {
+                currentIndex += 1
+            } else {
+                currentIndex += 1
+                break
+            }
+        }
+        pickerView.selectRow(currentIndex, inComponent: 0, animated: true)
+        
         timeZoneTF.inputView = pickerView
     }
     private func createPickerViewToolbar () {
@@ -226,6 +261,77 @@ class RegisterViewController: UIViewController {
 }
 
 extension RegisterViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == firstNameTF {
+            firstNameLine.image = UIImage(named: "blueLine")
+            firstNameSmallLabel.isHidden = false
+            firstNameSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+            firstNameTF.placeholder = ""
+        }
+        if textField == lastNameTF {
+            lastNameLine.image = UIImage(named: "blueLine")
+            lastNameSmallLabel.isHidden = false
+            lastNameSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+            lastNameTF.placeholder = ""
+        }
+        if textField == emailTF {
+            emailLine.image = UIImage(named: "blueLine")
+            emailSmallLabel.isHidden = false
+            emailSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+            emailTF.placeholder = ""
+        }
+        if textField == passwordTF {
+            passwordLine.image = UIImage(named: "blueLine")
+            passwordSmallLabel.isHidden = false
+            passwordSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+            passwordTF.placeholder = ""
+        }
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField == firstNameTF {
+            firstNameLine.image = UIImage(named: "greyLine")
+            if firstNameTF.text != "" {
+                firstNameSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+            } else {
+                firstNameSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                firstNameSmallLabel.isHidden = true
+                firstNameTF.placeholder = "First Name"
+            }
+        }
+        if textField == lastNameTF {
+            lastNameLine.image = UIImage(named: "greyLine")
+            if lastNameTF.text != "" {
+                lastNameSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+            } else {
+                lastNameSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                lastNameSmallLabel.isHidden = true
+                lastNameTF.placeholder = "Last Name"
+            }
+        }
+        if textField == emailTF {
+            emailLine.image = UIImage(named: "greyLine")
+            if emailTF.text != "" {
+                emailSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+            } else {
+                emailSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                emailSmallLabel.isHidden = true
+                emailTF.placeholder = "Email"
+            }
+        }
+        if textField == passwordTF {
+            passwordLine.image = UIImage(named: "greyLine")
+            if passwordTF.text != "" {
+                passwordSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+            } else {
+                passwordSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                passwordSmallLabel.isHidden = true
+                passwordTF.placeholder = "Password"
+            }
+        }
+        return true
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == timeZoneTF {
@@ -258,4 +364,12 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         pickerViewSelectedElement = allTimeZones[row]
         timeZoneTF.text = "Your timezone: \(pickerViewSelectedElement!)"
     }
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        let label = view as? UILabel ?? UILabel()
+//        label.text = allTimeZones[row]
+//        label.textAlignment = .center
+//        label.font = UIFont(name: "SF-Pro-Display-Bold", size: 20)
+//
+//        return label
+//    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0148E4250FFF6E0025451E /* LoginViewController.swift */; };
+		4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */; };
 		4DC6F76D2508ED9200F36588 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */; };
 		4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */; };
 		4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852425027E9C0063066A /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		4D0148E4250FFF6E0025451E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		4DCB852125027E9C0063066A /* BackToTheOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToTheOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				4DCB853225027EA20063066A /* Info.plist */,
 				4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */,
 				4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */,
+				4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = BackToTheOffice;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */,
 				4DCB853125027EA20063066A /* LaunchScreen.storyboard in Resources */,
 				4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */,
 				4DCB852E25027EA20063066A /* Assets.xcassets in Resources */,
