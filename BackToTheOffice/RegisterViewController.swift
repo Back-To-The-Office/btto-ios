@@ -10,6 +10,10 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    var emailIsValid = false
+    
+    var passwordIsValid = false
+    
     var doesTheScreeenHaveAMonobrow = true
     
     var blueSquareIsMarked = false
@@ -137,11 +141,26 @@ class RegisterViewController: UIViewController {
             showErrorMessage(title: "Пожалуйста, заполните все поля!", message: "bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla")
             return
         }
+        guard emailIsValid else {
+           showErrorMessage(title: "Проверьте введенный email", message: "bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla-bla")
+            return
+        }
+        
+        guard passwordIsValid else {
+           showErrorMessage(title: "Ваш пароль слишком простой", message: "Пароль должен быть не короче 6-ти символов, содержать заглавную и строчную буквы и цифру")
+            return
+        }
+        
+        
+        
+        
+        
+        
         guard blueSquareIsMarked == true else {
             showErrorMessage(title: "Поставь галку в синий квадрат!", message: "bla-bla-bla-bla-bla Если умеешь читать, прочитай наши условия и политику безопасности")
             return
         }
-        // Делаем POST запрос на регистрацию пользователя
+        // Делаем POST запрос на регистрацию пользователя c "Content-Type" "application/json"
         let urlString = "https://btto-back.herokuapp.com/api/v1/users/register"
         guard let url = URL(string: urlString) else {
             print("Неверный url")
@@ -150,7 +169,8 @@ class RegisterViewController: UIViewController {
         let parameters = ["email": email,
                           "firstName": firstName,
                           "lastName": lastName,
-                          "password": password]
+                          "password": password,
+                          "timezone": currentTimeZone!]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -258,6 +278,18 @@ class RegisterViewController: UIViewController {
     @objc func dismissKeyboard () {
         view.endEditing(true)
     }
+    
+}
+
+extension String {
+    func emailIsValid () -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self)
+    }
+    func passwordIsValid () -> Bool {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,20}$"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self)
+    }
 }
 
 extension RegisterViewController: UITextFieldDelegate {
@@ -310,20 +342,45 @@ extension RegisterViewController: UITextFieldDelegate {
                 lastNameTF.placeholder = "Last Name"
             }
         }
+        
+        
         if textField == emailTF {
             emailLine.image = UIImage(named: "greyLine")
             if emailTF.text != "" {
-                emailSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+                
+                if (emailTF.text?.emailIsValid())! {
+                    emailIsValid = true
+                    emailSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+                    emailTF.textColor = #colorLiteral(red: 0.2823529412, green: 0.2823529412, blue: 0.2901960784, alpha: 1)
+                } else {
+                    emailIsValid = false
+                    emailLine.image = UIImage(named: "redLine")
+                    emailSmallLabel.textColor = #colorLiteral(red: 0.8274509804, green: 0, blue: 0.01176470588, alpha: 1)
+                    emailTF.textColor = #colorLiteral(red: 0.8274509804, green: 0, blue: 0.01176470588, alpha: 1)
+                }
+                
             } else {
                 emailSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
                 emailSmallLabel.isHidden = true
                 emailTF.placeholder = "Email"
             }
+            
         }
         if textField == passwordTF {
             passwordLine.image = UIImage(named: "greyLine")
             if passwordTF.text != "" {
-                passwordSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+                
+                if (passwordTF.text?.passwordIsValid())! {
+                    passwordIsValid = true
+                    passwordSmallLabel.textColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+                    passwordTF.textColor = #colorLiteral(red: 0.2823529412, green: 0.2823529412, blue: 0.2901960784, alpha: 1)
+                } else {
+                    passwordIsValid = false
+                    passwordLine.image = UIImage(named: "redLine")
+                    passwordSmallLabel.textColor = #colorLiteral(red: 0.8274509804, green: 0, blue: 0.01176470588, alpha: 1)
+                    passwordTF.textColor = #colorLiteral(red: 0.8274509804, green: 0, blue: 0.01176470588, alpha: 1)
+                }
+                
             } else {
                 passwordSmallLabel.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
                 passwordSmallLabel.isHidden = true
@@ -363,6 +420,7 @@ extension RegisterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerViewSelectedElement = allTimeZones[row]
         timeZoneTF.text = "Your timezone: \(pickerViewSelectedElement!)"
+        currentTimeZone = pickerViewSelectedElement
     }
 //    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
 //        let label = view as? UILabel ?? UILabel()
