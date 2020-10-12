@@ -8,23 +8,43 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
     
+    @IBOutlet weak var tokenStatusLabel: UILabel!
     
+    @IBOutlet weak var yesOrNoLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+        //Проверка, есть ли сохраненный токен в системе
+        if let _ = UserDefaults().string(forKey: "tokenIdentifer") {
+            yesOrNoLabel.text = "ЕСТЬ"
+            tokenStatusLabel.text = "сохраненный токен"
+            backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.868272841, blue: 0, alpha: 1)
+        }
     }
     
-
-    @IBAction func button(_ sender: UIButton) {
+    @IBAction func getTestToken(_ sender: UIButton) {
+        //Запись токена в userDefaults
+        
+        let tokenIdentifier = "1234BTTOMobiletoken1234Identifier1234"
+        
+        let userDefaults = UserDefaults()
+        userDefaults.set(tokenIdentifier, forKey: "tokenIdentifer")
+        
+        yesOrNoLabel.text = "ЕСТЬ"
+        tokenStatusLabel.text = "сохраненный токен"
+        backgroundView.backgroundColor = #colorLiteral(red: 0, green: 0.868272841, blue: 0, alpha: 1)
+    }
+    
+    @IBAction func getTokenFromServer(_ sender: UIButton) {
         
         guard let email = loginTF.text, let password = passwordTF.text, email != "", password != "" else {
             print("Поля не заполнены")
@@ -62,8 +82,6 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }.resume()
-        
-        label.text = "Login"
         
     }
     

@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0148E4250FFF6E0025451E /* LoginViewController.swift */; };
 		4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */; };
+		4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7594D252F467D003D113E /* FeedbackViewController.swift */; };
+		4DA7595225303B35003D113E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7595125303B35003D113E /* Assets.xcassets */; };
+		4DA759572530BA28003D113E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA759562530BA27003D113E /* Extensions.swift */; };
 		4DC6F76D2508ED9200F36588 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */; };
 		4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */; };
 		4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852425027E9C0063066A /* AppDelegate.swift */; };
 		4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852625027E9C0063066A /* SceneDelegate.swift */; };
 		4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852825027E9C0063066A /* RegisterViewController.swift */; };
 		4DCB852C25027E9C0063066A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB852A25027E9C0063066A /* Main.storyboard */; };
-		4DCB852E25027EA20063066A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB852D25027EA20063066A /* Assets.xcassets */; };
 		4DCB853125027EA20063066A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB852F25027EA20063066A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D0148E4250FFF6E0025451E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		4DA7594D252F467D003D113E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		4DA7595125303B35003D113E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DA759562530BA27003D113E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4DA759872534C3DC003D113E /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		4DCB852125027E9C0063066A /* BackToTheOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToTheOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +35,6 @@
 		4DCB852625027E9C0063066A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4DCB852825027E9C0063066A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4DCB852B25027E9C0063066A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DCB852D25027EA20063066A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DCB853025027EA20063066A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DCB853225027EA20063066A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,10 +73,13 @@
 				4DCB852625027E9C0063066A /* SceneDelegate.swift */,
 				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
 				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
+				4DA7594D252F467D003D113E /* FeedbackViewController.swift */,
+				4DA759562530BA27003D113E /* Extensions.swift */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
-				4DCB852D25027EA20063066A /* Assets.xcassets */,
 				4DCB852F25027EA20063066A /* LaunchScreen.storyboard */,
+				4DA7595125303B35003D113E /* Assets.xcassets */,
 				4DCB853225027EA20063066A /* Info.plist */,
+				4DA759872534C3DC003D113E /* SF-Pro-Display-Regular.otf */,
 				4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */,
 				4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */,
 				4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */,
@@ -106,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Roman Egorov";
 				TargetAttributes = {
 					4DCB852025027E9C0063066A = {
@@ -140,8 +148,8 @@
 				4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */,
 				4DCB853125027EA20063066A /* LaunchScreen.storyboard in Resources */,
 				4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */,
-				4DCB852E25027EA20063066A /* Assets.xcassets in Resources */,
 				4DC6F76D2508ED9200F36588 /* SF-Pro-Display-Bold.otf in Resources */,
+				4DA7595225303B35003D113E /* Assets.xcassets in Resources */,
 				4DCB852C25027E9C0063066A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,9 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
+				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
+				4DA759572530BA28003D113E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +218,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,6 +279,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

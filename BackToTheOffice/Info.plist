@@ -7,6 +7,7 @@
 		<string>SF-Pro-Display-Bold.otf</string>
 		<string>SF-Pro-Text-Regular.otf</string>
 		<string>SF-Pro-Text-Semibold.otf</string>
+		<string>SF-Pro-Display-Regular</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
@@ -65,6 +66,16 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+		<string>viber</string>
+		<string>tg</string>
+		<string>sms</string>
+		<string>skype</string>
+		<string>whatsapp</string>
+		<string>slack</string>
 	</array>
 </dict>
 </plist>

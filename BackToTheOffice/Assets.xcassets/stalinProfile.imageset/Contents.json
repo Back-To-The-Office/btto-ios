@@ -5,12 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "verify@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "verify@3x.png",
+      "filename" : "stalinProfile.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
