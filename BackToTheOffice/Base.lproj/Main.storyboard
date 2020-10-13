@@ -154,8 +154,8 @@
                                             <action selector="emailButonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="ucJ-6W-eDn"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Iosif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-iv-SZY">
-                                        <rect key="frame" x="32" y="40" width="163" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Stalin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-iv-SZY">
+                                        <rect key="frame" x="32" y="40" width="180.66666666666666" height="34"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                         <color key="textColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
                                     <constraint firstItem="qpE-0L-uqM" firstAttribute="centerX" secondItem="DC8-ei-9cn" secondAttribute="centerX" id="F7g-e0-VMa"/>
                                     <constraint firstItem="Jwz-ib-Rsh" firstAttribute="top" secondItem="Cdz-xr-ZeX" secondAttribute="bottom" constant="55" id="GOK-fQ-rz2"/>
                                     <constraint firstItem="uyA-nF-d53" firstAttribute="top" secondItem="KLF-iv-SZY" secondAttribute="bottom" constant="40" id="Gvy-VP-DdR"/>
-                                    <constraint firstAttribute="height" constant="588" id="HpV-Jc-18Y"/>
+                                    <constraint firstAttribute="height" priority="750" constant="588" id="HpV-Jc-18Y"/>
                                     <constraint firstItem="qpE-0L-uqM" firstAttribute="top" secondItem="Cdz-xr-ZeX" secondAttribute="bottom" constant="55" id="LiS-Ks-CMS"/>
                                     <constraint firstItem="qwx-tO-gX5" firstAttribute="top" secondItem="KLF-iv-SZY" secondAttribute="bottom" constant="40" id="Pr0-Ht-dz7"/>
                                     <constraint firstAttribute="width" constant="414" id="Q1O-HO-sCb"/>
@@ -206,6 +206,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1008"/>
                     <connections>
+                        <outlet property="contactFirstNameLabel" destination="KLF-iv-SZY" id="YRV-sM-qrN"/>
                         <outlet property="firstNameAndLastNameLabel" destination="5KG-Vz-xyd" id="OPy-mU-Jhd"/>
                         <outlet property="greenCircle" destination="qkN-Ly-mUu" id="bQc-gx-v5e"/>
                         <outlet property="positionLabel" destination="Qek-w0-jjF" id="RDS-Hd-hzA"/>
@@ -1502,18 +1503,18 @@
         <image name="createAccountButton" width="500" height="74.666664123535156"/>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="greyLine" width="489.66665649414062" height="2.3333332538604736"/>
-        <image name="mail" width="120" height="120"/>
-        <image name="skype" width="120" height="120"/>
-        <image name="slack" width="120" height="120"/>
-        <image name="sms" width="120" height="120"/>
+        <image name="mail" width="80" height="80"/>
+        <image name="skype" width="80" height="80"/>
+        <image name="slack" width="80" height="80"/>
+        <image name="sms" width="80" height="80"/>
         <image name="stalinProfile" width="160" height="160"/>
         <image name="tabBarCompanyIcon" width="25" height="25"/>
         <image name="tabBarHomeIcon" width="25" height="25"/>
         <image name="tabBarProfileIcon" width="25" height="25"/>
         <image name="tabBarTeam" width="25" height="25"/>
-        <image name="telegram" width="120" height="120"/>
-        <image name="viber" width="120" height="120"/>
-        <image name="whatsApp" width="120" height="120"/>
+        <image name="telegram" width="80" height="80"/>
+        <image name="viber" width="80" height="80"/>
+        <image name="whatsApp" width="80" height="80"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

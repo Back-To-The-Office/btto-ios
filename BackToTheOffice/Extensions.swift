@@ -20,3 +20,12 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
     }
 }
+
+// Функция позволяет устанавливать интервал между символами в UILabel
+extension UILabel {
+    func setCharacterSpacing (_ spasing: CGFloat) {
+        let attributedStr = NSMutableAttributedString(string: self.text ?? "")
+        attributedStr.addAttribute(.kern, value: spasing, range: NSMakeRange(0, attributedStr.length))
+        self.attributedText = attributedStr
+    }
+}

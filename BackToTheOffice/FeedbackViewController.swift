@@ -21,9 +21,7 @@ class FeedbackViewController: UIViewController {
     
     @IBOutlet weak var positionLabel: UILabel!
     
-    
-    
-    
+    @IBOutlet weak var contactFirstNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +32,9 @@ class FeedbackViewController: UIViewController {
         
         whiteView.layer.cornerRadius = 20
         
+        firstNameAndLastNameLabel.setCharacterSpacing(1.2)
         
+        contactFirstNameLabel.setCharacterSpacing(1.2)
     }
     
     @IBAction func telegramButonTapped(_ sender: UIButton) {
