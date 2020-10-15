@@ -274,7 +274,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qk1-bB-zJV"/>
-                        <color key="backgroundColor" red="0.16078431369999999" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.074509803921568626" green="0.44313725490196076" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.16078431372549018" green="0.47450980392156861" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="1Qf-eM-npJ" firstAttribute="centerY" secondItem="GRf-I8-wjB" secondAttribute="centerY" constant="-212.8333333333334" id="A6f-UB-ilk"/>
@@ -1482,6 +1482,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rZI-Oe-WrQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="HeW-D7-6b8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
