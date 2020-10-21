@@ -10,6 +10,7 @@
 		4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0148E4250FFF6E0025451E /* LoginViewController.swift */; };
 		4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */; };
 		4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */; };
+		4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */; };
 		4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7594D252F467D003D113E /* FeedbackViewController.swift */; };
 		4DA7595225303B35003D113E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7595125303B35003D113E /* Assets.xcassets */; };
 		4DA759572530BA28003D113E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA759562530BA27003D113E /* Extensions.swift */; };
@@ -26,6 +27,7 @@
 		4D0148E4250FFF6E0025451E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUserPhotoViewController.swift; sourceTree = "<group>"; };
 		4DA7594D252F467D003D113E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		4DA7595125303B35003D113E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA759562530BA27003D113E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
 				4DA7594D252F467D003D113E /* FeedbackViewController.swift */,
 				4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */,
+				4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */,
 				4DA759562530BA27003D113E /* Extensions.swift */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
 				4DCB852F25027EA20063066A /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
 				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */,
