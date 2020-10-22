@@ -38,37 +38,38 @@ class FeedbackViewController: UIViewController {
     }
     
     @IBAction func telegramButonTapped(_ sender: UIButton) {
-        
+
         openApplicationOrPresentAC(appURL: "tg://resolve?domain=", userID: "@Sergey_Efimov12", titleAC: "Приложение \"Telegram\" не установлено на вашем устройстве")
     }
-    
+
     @IBAction func whatsAppButonTapped(_ sender: UIButton) {
         openApplicationOrPresentAC(appURL: "whatsapp://send/?phone=", userID: "79859704545", titleAC: "Приложение \"WhatsApp\" не установлено на вашем устройстве")
     }
-    
+
     @IBAction func viberButonTapped(_ sender: UIButton) {
-        
+
         openApplicationOrPresentAC(appURL: "viber://contact?number=", userID: "+79859704544", titleAC: "Приложение \"Viber\" не установлено на вашем устройстве")
     }
-    
+
     @IBAction func skypeButonTapped(_ sender: UIButton) {
         openApplicationOrPresentAC(appURL: "skype:", userID: "live:3bd7c6f2431c06a1", titleAC: "Приложение \"Skype\" не установлено на вашем устройстве")
         //live:3bd7c6f2431c06a1 - это userID
     }
-    
+
     @IBAction func emailButonTapped(_ sender: UIButton) {
-        
+
         openApplicationOrPresentAC(appURL: "mailto:", userID: "procorporate@inbox.ru", titleAC: "Приложение \"Почта\" не установлено на вашем устройстве")
     }
-    
+
     @IBAction func smsButonTapped(_ sender: UIButton) {
         UIApplication.shared.open(URL(string: "sms://+79273606585")!)
     }
-    
+
     @IBAction func slackButonTapped(_ sender: UIButton) {
-        openApplicationOrPresentAC(appURL: "slack://user?team=teambbworkspace&id=", userID: "Roman1983", titleAC: "Приложение \"Slack\" не установлено на вашем устройстве")
+                openApplicationOrPresentAC(appURL: "slack://user?team=teambbworkspace&id=", userID: "Roman1983", titleAC: "Приложение \"Slack\" не установлено на вашем устройстве")
     }
     
+
     private func openApplicationOrPresentAC (appURL: String, userID: String, titleAC: String) {
         
         var urlString = appURL + userID
