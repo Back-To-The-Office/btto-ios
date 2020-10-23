@@ -181,7 +181,6 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telegram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkZ-Ok-U8S">
                                         <rect key="frame" x="85" y="336.99999999999994" width="74" height="20"/>
-                                        <color key="backgroundColor" red="0.16078431369999999" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                                         <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -470,6 +469,83 @@
                                             <action selector="emailButonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="Hzb-Ii-1Xk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1E-pA-3b5">
+                                        <rect key="frame" x="260" y="92" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="8Eh-8n-Dk4"/>
+                                            <constraint firstAttribute="height" constant="40" id="O0E-RS-s2D"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="skypeCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="65R-OU-6GY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVR-7z-Qmc">
+                                        <rect key="frame" x="291.66666666666669" y="158.33333333333331" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="Ff5-5G-lWJ"/>
+                                            <constraint firstAttribute="height" constant="40" id="Q4v-Iq-jtI"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="whatsAppCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="5nf-T5-hnj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U2-JF-GNW">
+                                        <rect key="frame" x="286.66666666666669" y="224.66666666666669" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jcK-mO-TXR"/>
+                                            <constraint firstAttribute="width" constant="59" id="vZC-DJ-IBO"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="viberCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="erJ-iz-JZh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gds-Eb-qf1">
+                                        <rect key="frame" x="275" y="290.99999999999994" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3Cq-2i-OEW"/>
+                                            <constraint firstAttribute="width" constant="59" id="NyD-bJ-h9w"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="telegramCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="ftO-Zg-4NI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ix-c7-Vpt">
+                                        <rect key="frame" x="279.66666666666669" y="357.33333333333331" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="SXL-Zf-hnh"/>
+                                            <constraint firstAttribute="height" constant="40" id="dxZ-7e-FuW"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="slackCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="phQ-RL-aOK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g66-Xb-16V">
+                                        <rect key="frame" x="276.66666666666669" y="423.66666666666669" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="L13-hT-Qnh"/>
+                                            <constraint firstAttribute="height" constant="40" id="Njh-Jw-Ha4"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="iMessageCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="E4B-VG-DNf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KB0-QC-rdr">
+                                        <rect key="frame" x="260.66666666666669" y="496" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="il1-qF-Xzh"/>
+                                            <constraint firstAttribute="height" constant="40" id="kFz-cg-buD"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="mailCopyButtonTapped:" destination="hJN-tF-ckq" eventType="touchUpInside" id="k49-wC-ya3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -490,6 +566,7 @@
                                     <constraint firstItem="OqN-rr-5Ck" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="32" id="95U-Ax-AWl"/>
                                     <constraint firstItem="OJD-Ii-Jjv" firstAttribute="centerY" secondItem="3kV-jQ-fUk" secondAttribute="centerY" id="9K5-jW-GtM"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2JC-II-Ksd" secondAttribute="trailing" constant="20" symbolic="YES" id="9dv-oA-Utx"/>
+                                    <constraint firstItem="htQ-p5-PUg" firstAttribute="top" secondItem="0U2-JF-GNW" secondAttribute="bottom" constant="7" id="A2J-wu-pMH"/>
                                     <constraint firstAttribute="trailing" secondItem="RkM-tg-R7e" secondAttribute="trailing" constant="16" id="BT0-MI-AeN"/>
                                     <constraint firstAttribute="trailing" secondItem="bwC-CH-efl" secondAttribute="trailing" constant="16" id="BYA-ua-UKh"/>
                                     <constraint firstItem="p8R-cy-NbL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Qx-lp-pCC" secondAttribute="trailing" constant="8" symbolic="YES" id="Be5-6r-rrL"/>
@@ -497,10 +574,12 @@
                                     <constraint firstItem="8Db-XO-Tou" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="32" id="CeB-Jb-PzI"/>
                                     <constraint firstItem="H6p-Nd-Fps" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sqp-mT-nY7" secondAttribute="trailing" constant="8" symbolic="YES" id="DCG-f8-am2"/>
                                     <constraint firstItem="fVw-4a-sAC" firstAttribute="top" secondItem="RkM-tg-R7e" secondAttribute="bottom" constant="16" id="DPr-DI-0j5"/>
+                                    <constraint firstItem="b1E-pA-3b5" firstAttribute="centerX" secondItem="yYk-G4-ik8" secondAttribute="centerX" id="DbL-bD-mZp"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sqp-mT-nY7" secondAttribute="trailing" constant="20" symbolic="YES" id="Fkc-un-dyu"/>
                                     <constraint firstAttribute="trailing" secondItem="shc-P5-P8k" secondAttribute="trailing" constant="16" id="GHj-l2-ILL"/>
                                     <constraint firstItem="Bge-yy-AuZ" firstAttribute="centerY" secondItem="H6p-Nd-Fps" secondAttribute="centerY" id="GXK-HD-NZg"/>
                                     <constraint firstItem="LMA-H1-J98" firstAttribute="top" secondItem="bwC-CH-efl" secondAttribute="bottom" constant="16" id="HWQ-64-7f5"/>
+                                    <constraint firstItem="KEG-u8-n5i" firstAttribute="top" secondItem="Gds-Eb-qf1" secondAttribute="bottom" constant="7" id="Hjr-2J-Kl0"/>
                                     <constraint firstAttribute="height" priority="750" constant="688" id="HpV-Jc-18Y"/>
                                     <constraint firstItem="dbS-r4-YOa" firstAttribute="top" secondItem="cKB-ch-lfp" secondAttribute="bottom" constant="64" id="Irc-wi-cpd"/>
                                     <constraint firstItem="meV-S4-ENu" firstAttribute="centerY" secondItem="p8R-cy-NbL" secondAttribute="centerY" id="JK6-XV-s6X"/>
@@ -509,6 +588,7 @@
                                     <constraint firstItem="fVw-4a-sAC" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="32" id="KNs-jT-tLg"/>
                                     <constraint firstAttribute="trailing" secondItem="mex-Y9-TBQ" secondAttribute="trailing" constant="16" id="KYA-fn-pVD"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IkZ-Ok-U8S" secondAttribute="trailing" constant="20" symbolic="YES" id="Kle-ny-77Y"/>
+                                    <constraint firstItem="yYk-G4-ik8" firstAttribute="top" secondItem="b1E-pA-3b5" secondAttribute="bottom" constant="6.9999999999997158" id="N1G-IK-Ec1"/>
                                     <constraint firstItem="6Cn-l3-GuF" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="16" id="NsQ-GS-Epv"/>
                                     <constraint firstItem="Sqp-mT-nY7" firstAttribute="leading" secondItem="OqN-rr-5Ck" secondAttribute="trailing" constant="21" id="Ode-iL-2UZ"/>
                                     <constraint firstItem="KEG-u8-n5i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IkZ-Ok-U8S" secondAttribute="trailing" constant="8" symbolic="YES" id="OjG-23-JoK"/>
@@ -516,6 +596,7 @@
                                     <constraint firstItem="0GU-2u-zAC" firstAttribute="leading" secondItem="clP-6F-APl" secondAttribute="trailing" constant="16" id="PoL-jq-abe"/>
                                     <constraint firstItem="gWl-Ar-xid" firstAttribute="top" secondItem="KLF-iv-SZY" secondAttribute="bottom" constant="40" id="PvO-B3-wAa"/>
                                     <constraint firstAttribute="trailing" secondItem="aXD-uX-Rox" secondAttribute="trailing" constant="16" id="QOQ-4n-uCS"/>
+                                    <constraint firstItem="3kV-jQ-fUk" firstAttribute="top" secondItem="g66-Xb-16V" secondAttribute="bottom" constant="7" id="SU4-Kp-Ql1"/>
                                     <constraint firstItem="RkM-tg-R7e" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="16" id="Sem-Ss-oen"/>
                                     <constraint firstAttribute="trailing" secondItem="RpT-KS-s0g" secondAttribute="trailing" constant="16" id="T23-MO-LmG"/>
                                     <constraint firstItem="5dj-Qn-TE8" firstAttribute="leading" secondItem="dba-6F-Kiv" secondAttribute="trailing" constant="21" id="T8t-qJ-N3L"/>
@@ -541,7 +622,9 @@
                                     <constraint firstItem="VOb-dN-pB0" firstAttribute="centerY" secondItem="clP-6F-APl" secondAttribute="centerY" id="crp-5M-JdD"/>
                                     <constraint firstItem="zND-uD-qG2" firstAttribute="centerY" secondItem="3Qx-lp-pCC" secondAttribute="centerY" id="dBt-NM-zGK"/>
                                     <constraint firstAttribute="trailing" secondItem="OJD-Ii-Jjv" secondAttribute="trailing" constant="8" id="dKu-c2-b2s"/>
+                                    <constraint firstItem="p8R-cy-NbL" firstAttribute="top" secondItem="5ix-c7-Vpt" secondAttribute="bottom" constant="7" id="dci-4w-j11"/>
                                     <constraint firstItem="13w-Ep-Nyy" firstAttribute="centerY" secondItem="2JC-II-Ksd" secondAttribute="centerY" id="dtS-ih-9Qw"/>
+                                    <constraint firstItem="KB0-QC-rdr" firstAttribute="centerX" secondItem="clP-6F-APl" secondAttribute="centerX" id="du8-GA-iFb"/>
                                     <constraint firstAttribute="trailing" secondItem="0GU-2u-zAC" secondAttribute="trailing" constant="16" id="dxI-vO-02n"/>
                                     <constraint firstItem="cKB-ch-lfp" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="16" id="e4J-23-dY5"/>
                                     <constraint firstItem="cKB-ch-lfp" firstAttribute="top" secondItem="mex-Y9-TBQ" secondAttribute="bottom" constant="64" id="eCv-0B-j8V"/>
@@ -551,6 +634,7 @@
                                     <constraint firstItem="aXD-uX-Rox" firstAttribute="leading" secondItem="H6p-Nd-Fps" secondAttribute="trailing" constant="16" id="fta-Ud-9IO"/>
                                     <constraint firstAttribute="trailing" secondItem="cKB-ch-lfp" secondAttribute="trailing" constant="16" id="g6I-zm-kk3"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5pM-Km-iyQ" secondAttribute="trailing" constant="20" symbolic="YES" id="gUl-Vu-sze"/>
+                                    <constraint firstItem="clP-6F-APl" firstAttribute="top" secondItem="KB0-QC-rdr" secondAttribute="bottom" constant="1" id="gY6-rv-syM"/>
                                     <constraint firstItem="htQ-p5-PUg" firstAttribute="centerY" secondItem="U0a-UR-Gu5" secondAttribute="centerY" id="gcM-8I-USw"/>
                                     <constraint firstItem="IkZ-Ok-U8S" firstAttribute="centerY" secondItem="LMA-H1-J98" secondAttribute="centerY" id="gdv-OQ-Gay"/>
                                     <constraint firstItem="clP-6F-APl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5dj-Qn-TE8" secondAttribute="trailing" constant="8" symbolic="YES" id="hJ5-q5-2rL"/>
@@ -560,13 +644,19 @@
                                     <constraint firstItem="Njx-b5-IfF" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="32" id="hyj-c6-Hly"/>
                                     <constraint firstItem="LMA-H1-J98" firstAttribute="leading" secondItem="DC8-ei-9cn" secondAttribute="leading" constant="32" id="io7-wD-0tq"/>
                                     <constraint firstAttribute="trailing" secondItem="meV-S4-ENu" secondAttribute="trailing" constant="8" id="j6z-zt-GJr"/>
+                                    <constraint firstItem="0U2-JF-GNW" firstAttribute="centerX" secondItem="htQ-p5-PUg" secondAttribute="centerX" id="jB1-7v-Upn"/>
                                     <constraint firstItem="h3R-pS-Rvm" firstAttribute="leading" secondItem="KEG-u8-n5i" secondAttribute="trailing" constant="16" id="jDS-tx-gCz"/>
                                     <constraint firstItem="IkZ-Ok-U8S" firstAttribute="leading" secondItem="LMA-H1-J98" secondAttribute="trailing" constant="21" id="jRt-7T-qI5"/>
+                                    <constraint firstItem="kVR-7z-Qmc" firstAttribute="centerX" secondItem="H6p-Nd-Fps" secondAttribute="centerX" id="jTG-oS-ty9"/>
                                     <constraint firstItem="aKp-sv-jwk" firstAttribute="centerY" secondItem="5pM-Km-iyQ" secondAttribute="centerY" id="jjY-2v-PEy"/>
                                     <constraint firstAttribute="trailing" secondItem="Wdm-nD-6Ud" secondAttribute="trailing" constant="8" id="kiS-TO-lGK"/>
                                     <constraint firstItem="RkM-tg-R7e" firstAttribute="top" secondItem="bwC-CH-efl" secondAttribute="bottom" constant="64" id="l7y-Y1-R7A"/>
                                     <constraint firstItem="Njx-b5-IfF" firstAttribute="top" secondItem="gWl-Ar-xid" secondAttribute="bottom" constant="16" id="lJu-H8-wtV"/>
+                                    <constraint firstItem="H6p-Nd-Fps" firstAttribute="top" secondItem="kVR-7z-Qmc" secondAttribute="bottom" constant="7" id="mGK-bs-yaU"/>
                                     <constraint firstItem="yYk-G4-ik8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2JC-II-Ksd" secondAttribute="trailing" constant="8" symbolic="YES" id="mjv-sV-lwu"/>
+                                    <constraint firstItem="Gds-Eb-qf1" firstAttribute="centerX" secondItem="KEG-u8-n5i" secondAttribute="centerX" id="nf5-zz-JlH"/>
+                                    <constraint firstItem="5ix-c7-Vpt" firstAttribute="centerX" secondItem="p8R-cy-NbL" secondAttribute="centerX" id="q7b-CD-d7z"/>
+                                    <constraint firstItem="g66-Xb-16V" firstAttribute="centerX" secondItem="3kV-jQ-fUk" secondAttribute="centerX" id="qMH-iV-s2v"/>
                                     <constraint firstItem="5pM-Km-iyQ" firstAttribute="centerY" secondItem="lc8-Zi-7Pf" secondAttribute="centerY" id="qd2-7i-wHs"/>
                                     <constraint firstItem="obL-Xq-lXY" firstAttribute="centerY" secondItem="htQ-p5-PUg" secondAttribute="centerY" id="r8U-lK-H90"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KLF-iv-SZY" secondAttribute="trailing" constant="20" symbolic="YES" id="rVr-bv-Jnx"/>
@@ -612,14 +702,28 @@
                         <outlet property="contactFirstNameLabel" destination="KLF-iv-SZY" id="YRV-sM-qrN"/>
                         <outlet property="firstNameAndLastNameLabel" destination="5KG-Vz-xyd" id="OPy-mU-Jhd"/>
                         <outlet property="greenCircle" destination="qkN-Ly-mUu" id="bQc-gx-v5e"/>
+                        <outlet property="iMessageCopyButton" destination="g66-Xb-16V" id="hUn-ll-SkV"/>
+                        <outlet property="iMessageIDLabel" destination="3kV-jQ-fUk" id="Ey8-wZ-Ya5"/>
+                        <outlet property="mailCopyButton" destination="KB0-QC-rdr" id="LgU-b3-Ne2"/>
+                        <outlet property="mailIDLabel" destination="clP-6F-APl" id="RyK-yx-hYL"/>
                         <outlet property="positionLabel" destination="Qek-w0-jjF" id="RDS-Hd-hzA"/>
                         <outlet property="profileImage" destination="ZDf-UP-Fmy" id="Ib7-Pu-D9C"/>
+                        <outlet property="skypeCopyButton" destination="b1E-pA-3b5" id="Zvq-uh-QbN"/>
+                        <outlet property="skypeIDLabel" destination="yYk-G4-ik8" id="PAA-7V-3YE"/>
+                        <outlet property="slackCopyButton" destination="5ix-c7-Vpt" id="pX7-j2-mwf"/>
+                        <outlet property="slackIDLabel" destination="p8R-cy-NbL" id="UUI-OU-4wU"/>
+                        <outlet property="telegramCopyButton" destination="Gds-Eb-qf1" id="4w4-ZV-wsH"/>
+                        <outlet property="telegramIDLabel" destination="KEG-u8-n5i" id="UKC-fP-3Kl"/>
+                        <outlet property="viberCopyButton" destination="0U2-JF-GNW" id="X9y-3M-SDc"/>
+                        <outlet property="viberIDLabel" destination="htQ-p5-PUg" id="yLZ-PM-7Rr"/>
+                        <outlet property="whatsAppCopyButton" destination="kVR-7z-Qmc" id="Zst-PC-3pM"/>
+                        <outlet property="whatsAppIDLabel" destination="H6p-Nd-Fps" id="yvj-oF-iXu"/>
                         <outlet property="whiteView" destination="DC8-ei-9cn" id="50f-NE-4kw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGZ-WH-Bpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="-1835"/>
+            <point key="canvasLocation" x="1182.608695652174" y="-1835.15625"/>
         </scene>
         <!--Home-->
         <scene sceneID="S6x-Ia-Dln">
@@ -1271,9 +1375,87 @@
                                             <constraint firstAttribute="height" constant="43" id="rNT-sY-LAn"/>
                                         </constraints>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-96-pJu">
+                                        <rect key="frame" x="301" y="288.33333333333337" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="VPv-hW-uQZ"/>
+                                            <constraint firstAttribute="width" constant="59" id="eGe-uE-2Sf"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="skypeCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="39s-KQ-W6f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxk-R9-yLd">
+                                        <rect key="frame" x="276.66666666666669" y="355" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lQZ-I8-Obu"/>
+                                            <constraint firstAttribute="width" constant="59" id="lhZ-m1-3sX"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="whatsAppCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="KQx-sP-K8i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zi1-4m-egF">
+                                        <rect key="frame" x="276.66666666666669" y="421" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="NnZ-IO-h9j"/>
+                                            <constraint firstAttribute="height" constant="40" id="sLt-L8-FnG"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="viberCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="VXR-jg-kwE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-dc-puO">
+                                        <rect key="frame" x="294" y="487.33333333333337" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4RK-l0-78W"/>
+                                            <constraint firstAttribute="width" constant="59" id="ZpD-ej-3be"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="telegramCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="Ff0-qD-YGY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npM-HE-C2t">
+                                        <rect key="frame" x="279.66666666666669" y="554" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0vc-SC-9tw"/>
+                                            <constraint firstAttribute="width" constant="59" id="4qz-m4-SCa"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="slackCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="vzq-0f-lDk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-MO-I1s">
+                                        <rect key="frame" x="276.66666666666669" y="620" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="bCE-Ys-vJ8"/>
+                                            <constraint firstAttribute="height" constant="40" id="rG8-CP-BD9"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="iMessageCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="bOX-z3-858"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-wj-IVr">
+                                        <rect key="frame" x="260" y="686.33333333333326" width="59" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="iSR-ty-81a"/>
+                                            <constraint firstAttribute="height" constant="40" id="xA6-X6-VQG"/>
+                                        </constraints>
+                                        <state key="normal" image="labelIDCopy"/>
+                                        <connections>
+                                            <action selector="mailCopyButtonTapped:" destination="wfp-cK-25X" eventType="touchUpInside" id="YvU-rU-BfP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="us8-pz-Qh5" firstAttribute="top" secondItem="npM-HE-C2t" secondAttribute="bottom" constant="7" id="0Sj-q3-fAz"/>
                                     <constraint firstItem="us8-pz-Qh5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n35-sk-Woe" secondAttribute="trailing" constant="8" symbolic="YES" id="0bk-t1-GAF"/>
                                     <constraint firstItem="xTp-aM-fJf" firstAttribute="top" secondItem="HuW-xS-fMI" secondAttribute="bottom" constant="21" id="0gA-va-sXI"/>
                                     <constraint firstItem="NwP-e9-VSb" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="15A-Xm-eQA"/>
@@ -1282,6 +1464,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ExE-lG-35o" secondAttribute="trailing" constant="16" id="2nC-2v-dcL"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f2z-EJ-joU" secondAttribute="trailing" constant="20" symbolic="YES" id="2t4-WL-MHT"/>
                                     <constraint firstItem="qy6-Ba-5AS" firstAttribute="leading" secondItem="Vig-qW-i2b" secondAttribute="trailing" constant="21" id="3hU-fx-dQL"/>
+                                    <constraint firstItem="gdl-dc-puO" firstAttribute="centerX" secondItem="LTq-P1-7lW" secondAttribute="centerX" id="5Vv-sK-ZYv"/>
                                     <constraint firstItem="3qN-Wk-wE1" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="6At-xQ-8rm"/>
                                     <constraint firstItem="1Zd-kP-JAd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f2z-EJ-joU" secondAttribute="trailing" constant="8" symbolic="YES" id="6kl-xf-6a4"/>
                                     <constraint firstItem="S5L-hW-k08" firstAttribute="centerY" secondItem="BfH-b6-8b4" secondAttribute="centerY" id="7Gj-47-okE"/>
@@ -1291,13 +1474,16 @@
                                     <constraint firstAttribute="trailing" secondItem="89A-HP-4E0" secondAttribute="trailing" constant="8" id="92W-cZ-jEZ"/>
                                     <constraint firstAttribute="trailing" secondItem="8op-XC-wly" secondAttribute="trailing" constant="16" id="957-oa-sFn"/>
                                     <constraint firstItem="bf8-Al-5xj" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="16" id="96s-6l-cKc"/>
+                                    <constraint firstItem="LTq-P1-7lW" firstAttribute="top" secondItem="gdl-dc-puO" secondAttribute="bottom" constant="7" id="9oZ-m2-Pw8"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qy6-Ba-5AS" secondAttribute="trailing" constant="20" symbolic="YES" id="AhZ-Rh-9Az"/>
+                                    <constraint firstItem="iRh-cW-uHQ" firstAttribute="top" secondItem="geE-96-pJu" secondAttribute="bottom" constant="7" id="BIV-eg-1Mp"/>
                                     <constraint firstAttribute="trailing" secondItem="S5L-hW-k08" secondAttribute="trailing" constant="8" id="BOU-8I-BUR"/>
                                     <constraint firstAttribute="trailing" secondItem="nZ7-cq-Teg" secondAttribute="trailing" constant="16" id="CkE-VJ-Qrb"/>
                                     <constraint firstItem="ExE-lG-35o" firstAttribute="leading" secondItem="LTq-P1-7lW" secondAttribute="trailing" constant="16" id="Cyq-B3-Z0J"/>
                                     <constraint firstItem="nCG-6m-IDH" firstAttribute="top" secondItem="dyc-0a-hGm" secondAttribute="bottom" constant="40" id="D3Z-Bz-H5q"/>
                                     <constraint firstItem="NwP-e9-VSb" firstAttribute="top" secondItem="VXv-q5-kKJ" secondAttribute="bottom" constant="16" id="DQD-Ro-9ef"/>
                                     <constraint firstItem="nMq-J4-xug" firstAttribute="centerY" secondItem="GHF-3a-6ts" secondAttribute="centerY" id="EDS-nU-igK"/>
+                                    <constraint firstItem="Nxk-R9-yLd" firstAttribute="centerX" secondItem="BfH-b6-8b4" secondAttribute="centerX" id="FSF-r0-eWO"/>
                                     <constraint firstAttribute="trailing" secondItem="9FL-gM-QxQ" secondAttribute="trailing" constant="8" id="GW9-aU-p0h"/>
                                     <constraint firstItem="Yc2-XZ-ElF" firstAttribute="top" secondItem="nCG-6m-IDH" secondAttribute="bottom" constant="64" id="GsW-hF-lLj"/>
                                     <constraint firstItem="iQo-i6-Wge" firstAttribute="centerY" secondItem="f2z-EJ-joU" secondAttribute="centerY" id="GuC-8T-XM8"/>
@@ -1323,6 +1509,7 @@
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GHF-3a-6ts" secondAttribute="trailing" constant="20" symbolic="YES" id="T7C-Qc-YQa"/>
                                     <constraint firstItem="DA8-3Q-WNS" firstAttribute="top" secondItem="VXv-q5-kKJ" secondAttribute="bottom" constant="64" id="TKj-Ax-pUp"/>
                                     <constraint firstItem="nZ7-cq-Teg" firstAttribute="top" secondItem="AgK-Ch-K1M" secondAttribute="bottom" constant="64" id="Tri-rJ-LXC"/>
+                                    <constraint firstItem="Z7L-wj-IVr" firstAttribute="centerX" secondItem="WUF-CM-qWi" secondAttribute="centerX" id="Uay-0x-epJ"/>
                                     <constraint firstItem="N3J-Gw-1LH" firstAttribute="centerY" secondItem="W2Z-yg-dtn" secondAttribute="centerY" id="UfB-bu-m4j"/>
                                     <constraint firstItem="Vig-qW-i2b" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="Uw0-Fj-mjj"/>
                                     <constraint firstItem="aSn-Jt-Sjp" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="V01-5p-2d1"/>
@@ -1333,6 +1520,7 @@
                                     <constraint firstItem="y6s-tx-QLN" firstAttribute="top" secondItem="AgK-Ch-K1M" secondAttribute="bottom" constant="21" id="Zzb-CK-x6l"/>
                                     <constraint firstAttribute="trailing" secondItem="nCG-6m-IDH" secondAttribute="trailing" constant="16" id="aNg-Vr-Acy"/>
                                     <constraint firstItem="Ppf-82-JKV" firstAttribute="top" secondItem="6gF-Dv-XRm" secondAttribute="top" constant="48" id="aSF-a7-QMm"/>
+                                    <constraint firstItem="W2Z-yg-dtn" firstAttribute="top" secondItem="zi1-4m-egF" secondAttribute="bottom" constant="7" id="abe-tU-qFC"/>
                                     <constraint firstItem="nCG-6m-IDH" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="16" id="abn-JA-PKg"/>
                                     <constraint firstItem="n35-sk-Woe" firstAttribute="top" secondItem="VXv-q5-kKJ" secondAttribute="bottom" constant="21" id="ajE-Ma-Utn"/>
                                     <constraint firstItem="dyc-0a-hGm" firstAttribute="top" secondItem="a84-Sk-da4" secondAttribute="bottom" constant="48" id="ap1-cp-FIi"/>
@@ -1372,7 +1560,10 @@
                                     <constraint firstAttribute="trailing" secondItem="vxi-FB-2uL" secondAttribute="trailing" constant="16" id="nYd-oM-1gr"/>
                                     <constraint firstItem="HuW-xS-fMI" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="16" id="na3-L2-VSd"/>
                                     <constraint firstItem="p48-bG-fru" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="pyl-EP-u0E"/>
+                                    <constraint firstItem="ySG-MO-I1s" firstAttribute="centerX" secondItem="1Zd-kP-JAd" secondAttribute="centerX" id="qCn-eL-rW4"/>
                                     <constraint firstAttribute="trailing" secondItem="gxf-Tq-JQ5" secondAttribute="trailing" constant="8" id="qKk-PZ-cwj"/>
+                                    <constraint firstItem="1Zd-kP-JAd" firstAttribute="top" secondItem="ySG-MO-I1s" secondAttribute="bottom" constant="7" id="qbN-Vd-gVf"/>
+                                    <constraint firstItem="npM-HE-C2t" firstAttribute="centerX" secondItem="us8-pz-Qh5" secondAttribute="centerX" id="qno-Ho-38H"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ppf-82-JKV" secondAttribute="trailing" constant="20" symbolic="YES" id="qqV-qF-Yjv"/>
                                     <constraint firstItem="y6s-tx-QLN" firstAttribute="leading" secondItem="3qN-Wk-wE1" secondAttribute="trailing" constant="21" id="r5r-2P-Hsh"/>
                                     <constraint firstAttribute="trailing" secondItem="DA8-3Q-WNS" secondAttribute="trailing" constant="16" id="rLd-yf-XvG"/>
@@ -1385,13 +1576,17 @@
                                     <constraint firstItem="8op-XC-wly" firstAttribute="centerY" secondItem="n35-sk-Woe" secondAttribute="centerY" id="uNm-R2-SKe"/>
                                     <constraint firstItem="SOh-U2-ri5" firstAttribute="leading" secondItem="W2Z-yg-dtn" secondAttribute="trailing" constant="16" id="uvs-GT-IMi"/>
                                     <constraint firstAttribute="trailing" secondItem="r2e-fX-R3P" secondAttribute="trailing" constant="8" id="vDc-mY-YF7"/>
+                                    <constraint firstItem="BfH-b6-8b4" firstAttribute="top" secondItem="Nxk-R9-yLd" secondAttribute="bottom" constant="7" id="vJ5-rz-mzj"/>
+                                    <constraint firstItem="zi1-4m-egF" firstAttribute="centerX" secondItem="W2Z-yg-dtn" secondAttribute="centerX" id="w76-EN-rYl"/>
                                     <constraint firstItem="3qN-Wk-wE1" firstAttribute="top" secondItem="AgK-Ch-K1M" secondAttribute="bottom" constant="16" id="wHm-tz-28w"/>
                                     <constraint firstItem="ef3-O9-jNd" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="wId-aA-hR9"/>
                                     <constraint firstItem="LTq-P1-7lW" firstAttribute="centerY" secondItem="vMh-cc-812" secondAttribute="centerY" id="wfm-Ac-PIo"/>
                                     <constraint firstItem="3lJ-AG-Cxr" firstAttribute="centerY" secondItem="iRh-cW-uHQ" secondAttribute="centerY" id="woT-Ce-ST3"/>
                                     <constraint firstItem="HuW-xS-fMI" firstAttribute="top" secondItem="DA8-3Q-WNS" secondAttribute="bottom" constant="64.000000000000057" id="x4F-VR-ReM"/>
+                                    <constraint firstItem="WUF-CM-qWi" firstAttribute="top" secondItem="Z7L-wj-IVr" secondAttribute="bottom" constant="7" id="x92-6u-kAj"/>
                                     <constraint firstItem="Ppf-82-JKV" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="32" id="xA5-Iq-0pl"/>
                                     <constraint firstItem="nZ7-cq-Teg" firstAttribute="leading" secondItem="6gF-Dv-XRm" secondAttribute="leading" constant="16" id="xBC-9Z-uIO"/>
+                                    <constraint firstItem="geE-96-pJu" firstAttribute="centerX" secondItem="iRh-cW-uHQ" secondAttribute="centerX" id="xFo-WP-dnT"/>
                                     <constraint firstItem="5pK-iR-6zr" firstAttribute="leading" secondItem="BfH-b6-8b4" secondAttribute="trailing" constant="16" id="xpD-hN-UWj"/>
                                     <constraint firstItem="f2z-EJ-joU" firstAttribute="leading" secondItem="aSn-Jt-Sjp" secondAttribute="trailing" constant="21" id="xwZ-YH-yHl"/>
                                     <constraint firstAttribute="trailing" secondItem="4no-QL-NxL" secondAttribute="trailing" constant="16" id="zV5-ya-ZbR"/>
@@ -1433,16 +1628,23 @@
                         <outlet property="blueView" destination="OC1-8Z-crE" id="t54-uo-3RN"/>
                         <outlet property="firstAndLastNameTF" destination="Ny0-mO-ppN" id="5aY-PI-hEc"/>
                         <outlet property="greenCircle" destination="fsf-wC-4Wx" id="TM7-I8-Ofe"/>
+                        <outlet property="iMessageCopyButton" destination="ySG-MO-I1s" id="ZVi-1G-kMx"/>
                         <outlet property="iMessageIDLabel" destination="1Zd-kP-JAd" id="yQu-3K-Crg"/>
+                        <outlet property="mailCopyButton" destination="Z7L-wj-IVr" id="Cw0-Nr-wdT"/>
                         <outlet property="mailIDLabel" destination="WUF-CM-qWi" id="g6Y-Ek-RRM"/>
                         <outlet property="positionTF" destination="Tmx-Nc-bsn" id="OGl-5r-wS1"/>
                         <outlet property="profileImage" destination="hAi-VB-JZY" id="050-Zh-RvC"/>
                         <outlet property="profileImageButton" destination="9ip-tS-37m" id="bqt-6x-qbf"/>
+                        <outlet property="skypeCopyButton" destination="geE-96-pJu" id="a03-RY-HUJ"/>
                         <outlet property="skypeIDLabel" destination="iRh-cW-uHQ" id="dCg-Ux-SIF"/>
+                        <outlet property="slackCopyButton" destination="npM-HE-C2t" id="7PF-BF-wJ8"/>
                         <outlet property="slackIDLabel" destination="us8-pz-Qh5" id="TgA-7A-UCW"/>
+                        <outlet property="telegramCopyButton" destination="gdl-dc-puO" id="nF6-bH-dwy"/>
                         <outlet property="telegramIDLabel" destination="LTq-P1-7lW" id="HRX-sX-Jtg"/>
+                        <outlet property="viberCopyButton" destination="zi1-4m-egF" id="UZd-H9-syj"/>
                         <outlet property="viberIDLabel" destination="W2Z-yg-dtn" id="CFf-dW-A5a"/>
-                        <outlet property="whatsAppIDLebel" destination="BfH-b6-8b4" id="CEN-0M-nWg"/>
+                        <outlet property="whatsAppCopyButton" destination="Nxk-R9-yLd" id="Mo4-AN-lXW"/>
+                        <outlet property="whatsAppIDLabel" destination="BfH-b6-8b4" id="CEN-0M-nWg"/>
                         <outlet property="whiteCheckMark" destination="RJY-oS-Xa7" id="cyJ-IR-Z5r"/>
                         <outlet property="whiteCheckMarkButton" destination="T4J-TS-abv" id="oXM-4W-Etb"/>
                         <outlet property="whiteLine" destination="m7L-pS-EGl" id="1WZ-DD-hX1"/>
@@ -2696,6 +2898,7 @@
         <image name="fidelProfile" width="160" height="160"/>
         <image name="grayArrow" width="13.666666984558105" height="20"/>
         <image name="greyLine" width="489.66665649414062" height="2.3333332538604736"/>
+        <image name="labelIDCopy" width="160" height="109.33333587646484"/>
         <image name="mail" width="80" height="80"/>
         <image name="skype" width="80" height="80"/>
         <image name="slack" width="80" height="80"/>

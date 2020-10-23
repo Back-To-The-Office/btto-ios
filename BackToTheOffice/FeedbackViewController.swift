@@ -23,6 +23,34 @@ class FeedbackViewController: UIViewController {
     
     @IBOutlet weak var contactFirstNameLabel: UILabel!
     
+    @IBOutlet weak var skypeIDLabel: UILabel!
+    
+    @IBOutlet weak var whatsAppIDLabel: UILabel!
+    
+    @IBOutlet weak var viberIDLabel: UILabel!
+    
+    @IBOutlet weak var telegramIDLabel: UILabel!
+    
+    @IBOutlet weak var slackIDLabel: UILabel!
+    
+    @IBOutlet weak var iMessageIDLabel: UILabel!
+    
+    @IBOutlet weak var mailIDLabel: UILabel!
+    
+    @IBOutlet weak var skypeCopyButton: UIButton!
+    
+    @IBOutlet weak var whatsAppCopyButton: UIButton!
+    
+    @IBOutlet weak var viberCopyButton: UIButton!
+    
+    @IBOutlet weak var telegramCopyButton: UIButton!
+    
+    @IBOutlet weak var slackCopyButton: UIButton!
+    
+    @IBOutlet weak var iMessageCopyButton: UIButton!
+    
+    @IBOutlet weak var mailCopyButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +63,10 @@ class FeedbackViewController: UIViewController {
         firstNameAndLastNameLabel.setCharacterSpacing(1.2)
         
         contactFirstNameLabel.setCharacterSpacing(1.2)
+        
+        createLongPressGestureRecognizersAndAddToIDLabels()
+        
+        hideAllCopyButtons ()
     }
     
     @IBAction func telegramButonTapped(_ sender: UIButton) {
@@ -69,7 +101,56 @@ class FeedbackViewController: UIViewController {
                 openApplicationOrPresentAC(appURL: "slack://user?team=teambbworkspace&id=", userID: "Roman1983", titleAC: "Приложение \"Slack\" не установлено на вашем устройстве")
     }
     
-
+    
+    @IBAction func skypeCopyButtonTapped(_ sender: UIButton) {
+        skypeCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        skypeIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = skypeIDLabel.text
+    }
+    
+    @IBAction func whatsAppCopyButtonTapped(_ sender: UIButton) {
+        whatsAppCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        whatsAppIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = whatsAppIDLabel.text
+    }
+    
+    @IBAction func viberCopyButtonTapped(_ sender: UIButton) {
+        viberCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        viberIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = viberIDLabel.text
+    }
+    
+    @IBAction func telegramCopyButtonTapped(_ sender: UIButton) {
+        telegramCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        telegramIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = telegramIDLabel.text
+    }
+    
+    @IBAction func slackCopyButtonTapped(_ sender: UIButton) {
+        slackCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        slackIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = slackIDLabel.text
+    }
+    
+    @IBAction func iMessageCopyButtonTapped(_ sender: UIButton) {
+        iMessageCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        iMessageIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = iMessageIDLabel.text
+    }
+    
+    @IBAction func mailCopyButtonTapped(_ sender: UIButton) {
+        mailCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        mailIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = mailIDLabel.text
+    }
+    
     private func openApplicationOrPresentAC (appURL: String, userID: String, titleAC: String) {
         
         var urlString = appURL + userID
@@ -119,21 +200,82 @@ class FeedbackViewController: UIViewController {
         }
     }
     
-    
-//    private func openApplicationOrSafari (appUrl:String, safariUrl:String) {
-//        guard let appURL = URL(string: appUrl) else { return }
-//        guard let safariURL = URL(string: safariUrl) else { return }
-//
-//        if UIApplication.shared.canOpenURL(appURL) {
-//
-//            UIApplication.shared.open(appURL)
-//
-//        } else {
-//
-//            UIApplication.shared.open(safariURL)
-//        }
-//     }
-    
-   
+    private func createLongPressGestureRecognizersAndAddToIDLabels () {
+        
+        let skypeLPGR = UILongPressGestureRecognizer(target: self, action: #selector(skypeLongPress))
+        let whatsAppLPGR = UILongPressGestureRecognizer(target: self, action: #selector(whatsAppLongPress))
+        let viberLPGR = UILongPressGestureRecognizer(target: self, action: #selector(viberLongPress))
+        let telegramLPGR = UILongPressGestureRecognizer(target: self, action: #selector(telegramLongPress))
+        let slackLPGR = UILongPressGestureRecognizer(target: self, action: #selector(slackLongPress))
+        let iMessageLPGR = UILongPressGestureRecognizer(target: self, action: #selector(iMessageLongPress))
+        let mailLPGR = UILongPressGestureRecognizer(target: self, action: #selector(mailLongPress))
+        
+        skypeIDLabel.addGestureRecognizer(skypeLPGR)
+        whatsAppIDLabel.addGestureRecognizer(whatsAppLPGR)
+        viberIDLabel.addGestureRecognizer(viberLPGR)
+        telegramIDLabel.addGestureRecognizer(telegramLPGR)
+        slackIDLabel.addGestureRecognizer(slackLPGR)
+        iMessageIDLabel.addGestureRecognizer(iMessageLPGR)
+        mailIDLabel.addGestureRecognizer(mailLPGR)
+        
+        allIDLabelsUserInteraction(isEnabled: true)
+        
+    }
 
+    @objc private func skypeLongPress () {
+        skypeIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        skypeCopyButton.isHidden = false
+    }
+    @objc private func whatsAppLongPress () {
+        whatsAppIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        whatsAppCopyButton.isHidden = false
+    }
+    @objc private func viberLongPress () {
+        viberIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        viberCopyButton.isHidden = false
+    }
+    @objc private func telegramLongPress () {
+        telegramIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        telegramCopyButton.isHidden = false
+    }
+    @objc private func slackLongPress () {
+        slackIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        slackCopyButton.isHidden = false
+    }
+    @objc private func iMessageLongPress () {
+        iMessageIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        iMessageCopyButton.isHidden = false
+    }
+    @objc private func mailLongPress () {
+        mailIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        mailCopyButton.isHidden = false
+    }
+    
+    private func allIDLabelsUserInteraction (isEnabled: Bool) {
+        
+        skypeIDLabel.isUserInteractionEnabled = isEnabled
+        whatsAppIDLabel.isUserInteractionEnabled = isEnabled
+        viberIDLabel.isUserInteractionEnabled = isEnabled
+        telegramIDLabel.isUserInteractionEnabled = isEnabled
+        slackIDLabel.isUserInteractionEnabled = isEnabled
+        iMessageIDLabel.isUserInteractionEnabled = isEnabled
+        mailIDLabel.isUserInteractionEnabled = isEnabled
+         
+    }
+    private func hideAllCopyButtons () {
+        skypeCopyButton.isHidden = true
+        whatsAppCopyButton.isHidden = true
+        viberCopyButton.isHidden = true
+        telegramCopyButton.isHidden = true
+        slackCopyButton.isHidden = true
+        iMessageCopyButton.isHidden = true
+        mailCopyButton.isHidden = true
+    }
 }

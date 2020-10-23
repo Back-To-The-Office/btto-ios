@@ -40,7 +40,7 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var skypeIDLabel: UILabel!
     
-    @IBOutlet weak var whatsAppIDLebel: UILabel!
+    @IBOutlet weak var whatsAppIDLabel: UILabel!
     
     @IBOutlet weak var viberIDLabel: UILabel!
     
@@ -52,7 +52,19 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var mailIDLabel: UILabel!
     
+    @IBOutlet weak var skypeCopyButton: UIButton!
     
+    @IBOutlet weak var whatsAppCopyButton: UIButton!
+    
+    @IBOutlet weak var viberCopyButton: UIButton!
+    
+    @IBOutlet weak var telegramCopyButton: UIButton!
+    
+    @IBOutlet weak var slackCopyButton: UIButton!
+    
+    @IBOutlet weak var iMessageCopyButton: UIButton!
+    
+    @IBOutlet weak var mailCopyButton: UIButton!
     
     
     
@@ -68,7 +80,8 @@ class UserProfileViewController: UIViewController {
         
         nameIsEdited(false)
         
-        
+        createLongPressGestureRecognizersAndAddToIDLabels()
+        hideAllCopyButtons()
         
     }
     
@@ -100,29 +113,6 @@ class UserProfileViewController: UIViewController {
             print("Посмотреть фото")
             
             self?.performSegue(withIdentifier: "showProfileImage", sender: nil)
-            
-//            let seePhotoController = UIAlertController(title: "Ваше фото", message: nil, preferredStyle: .alert)
-//
-//            let height = NSLayoutConstraint(item: seePhotoController.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 400)
-//
-//            let width = NSLayoutConstraint(item: seePhotoController.view!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0, constant: 400)
-//
-//            seePhotoController.view.addConstraint(height)
-//            seePhotoController.view.addConstraint(width)
-//
-//            let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: width.constant , height: height.constant)))
-//
-//            seePhotoController.view.addSubview(imageView)
-//
-//
-//            imageView.contentMode = .scaleAspectFill
-//
-//            imageView.clipsToBounds = true
-//            imageView.layer.cornerRadius = 14
-//            imageView.image = self.profileImage.image
-//
-//            self.present(seePhotoController, animated: true, completion: nil)
-           
         }
         let deletePhotoAction = UIAlertAction(title: "Удалить фото", style: .default) { [weak self] _ in
             self?.profileImage.image = UIImage(named: "noPhoto")
@@ -140,7 +130,125 @@ class UserProfileViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
+    @IBAction func skypeCopyButtonTapped(_ sender: UIButton) {
+        skypeCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        skypeIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = skypeIDLabel.text
+    }
     
+    @IBAction func whatsAppCopyButtonTapped(_ sender: UIButton) {
+        whatsAppCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        whatsAppIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = whatsAppIDLabel.text
+    }
+    
+    @IBAction func viberCopyButtonTapped(_ sender: UIButton) {
+        viberCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        viberIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = viberIDLabel.text
+    }
+    
+    @IBAction func telegramCopyButtonTapped(_ sender: UIButton) {
+        telegramCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        telegramIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = telegramIDLabel.text
+    }
+    
+    @IBAction func slackCopyButtonTapped(_ sender: UIButton) {
+        slackCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        slackIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = slackIDLabel.text
+    }
+    
+    @IBAction func iMessageCopyButtonTapped(_ sender: UIButton) {
+        iMessageCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        iMessageIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = iMessageIDLabel.text
+    }
+    
+    @IBAction func mailCopyButtonTapped(_ sender: UIButton) {
+        mailCopyButton.isHidden = true
+        allIDLabelsUserInteraction(isEnabled: true)
+        mailIDLabel.backgroundColor = nil
+        UIPasteboard.general.string = mailIDLabel.text
+    }
+    
+    private func createLongPressGestureRecognizersAndAddToIDLabels () {
+        
+        let skypeLPGR = UILongPressGestureRecognizer(target: self, action: #selector(skypeLongPress))
+        let whatsAppLPGR = UILongPressGestureRecognizer(target: self, action: #selector(whatsAppLongPress))
+        let viberLPGR = UILongPressGestureRecognizer(target: self, action: #selector(viberLongPress))
+        let telegramLPGR = UILongPressGestureRecognizer(target: self, action: #selector(telegramLongPress))
+        let slackLPGR = UILongPressGestureRecognizer(target: self, action: #selector(slackLongPress))
+        let iMessageLPGR = UILongPressGestureRecognizer(target: self, action: #selector(iMessageLongPress))
+        let mailLPGR = UILongPressGestureRecognizer(target: self, action: #selector(mailLongPress))
+        
+        skypeIDLabel.addGestureRecognizer(skypeLPGR)
+        whatsAppIDLabel.addGestureRecognizer(whatsAppLPGR)
+        viberIDLabel.addGestureRecognizer(viberLPGR)
+        telegramIDLabel.addGestureRecognizer(telegramLPGR)
+        slackIDLabel.addGestureRecognizer(slackLPGR)
+        iMessageIDLabel.addGestureRecognizer(iMessageLPGR)
+        mailIDLabel.addGestureRecognizer(mailLPGR)
+        
+        allIDLabelsUserInteraction(isEnabled: true)
+        
+    }
+
+    @objc private func skypeLongPress () {
+        skypeIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        skypeCopyButton.isHidden = false
+    }
+    @objc private func whatsAppLongPress () {
+        whatsAppIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        whatsAppCopyButton.isHidden = false
+    }
+    @objc private func viberLongPress () {
+        viberIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        viberCopyButton.isHidden = false
+    }
+    @objc private func telegramLongPress () {
+        telegramIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        telegramCopyButton.isHidden = false
+    }
+    @objc private func slackLongPress () {
+        slackIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        slackCopyButton.isHidden = false
+    }
+    @objc private func iMessageLongPress () {
+        iMessageIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        iMessageCopyButton.isHidden = false
+    }
+    @objc private func mailLongPress () {
+        mailIDLabel.backgroundColor = .darkGray
+        allIDLabelsUserInteraction(isEnabled: false)
+        mailCopyButton.isHidden = false
+    }
+    
+    private func allIDLabelsUserInteraction (isEnabled: Bool) {
+        
+        skypeIDLabel.isUserInteractionEnabled = isEnabled
+        whatsAppIDLabel.isUserInteractionEnabled = isEnabled
+        viberIDLabel.isUserInteractionEnabled = isEnabled
+        telegramIDLabel.isUserInteractionEnabled = isEnabled
+        slackIDLabel.isUserInteractionEnabled = isEnabled
+        iMessageIDLabel.isUserInteractionEnabled = isEnabled
+        mailIDLabel.isUserInteractionEnabled = isEnabled
+        
+        
+    }
     
     private func nameIsEdited (_ isEdited: Bool) {
         if isEdited {
@@ -194,5 +302,14 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "showProfileImage", let seeUserPhotoVC = segue.destination as? SeeUserPhotoViewController else { return }
         seeUserPhotoVC.currentProfileImage = profileImage.image ?? #imageLiteral(resourceName: "tabBarProfileIcon")
+    }
+    private func hideAllCopyButtons () {
+        skypeCopyButton.isHidden = true
+        whatsAppCopyButton.isHidden = true
+        viberCopyButton.isHidden = true
+        telegramCopyButton.isHidden = true
+        slackCopyButton.isHidden = true
+        iMessageCopyButton.isHidden = true
+        mailCopyButton.isHidden = true
     }
 }
