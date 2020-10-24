@@ -223,37 +223,37 @@ class FeedbackViewController: UIViewController {
     }
 
     @objc private func skypeLongPress () {
-        skypeIDLabel.backgroundColor = .darkGray
+        skypeIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         skypeCopyButton.isHidden = false
     }
     @objc private func whatsAppLongPress () {
-        whatsAppIDLabel.backgroundColor = .darkGray
+        whatsAppIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         whatsAppCopyButton.isHidden = false
     }
     @objc private func viberLongPress () {
-        viberIDLabel.backgroundColor = .darkGray
+        viberIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         viberCopyButton.isHidden = false
     }
     @objc private func telegramLongPress () {
-        telegramIDLabel.backgroundColor = .darkGray
+        telegramIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         telegramCopyButton.isHidden = false
     }
     @objc private func slackLongPress () {
-        slackIDLabel.backgroundColor = .darkGray
+        slackIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         slackCopyButton.isHidden = false
     }
     @objc private func iMessageLongPress () {
-        iMessageIDLabel.backgroundColor = .darkGray
+        iMessageIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         iMessageCopyButton.isHidden = false
     }
     @objc private func mailLongPress () {
-        mailIDLabel.backgroundColor = .darkGray
+        mailIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         mailCopyButton.isHidden = false
     }

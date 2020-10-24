@@ -66,9 +66,6 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var mailCopyButton: UIButton!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -179,6 +176,173 @@ class UserProfileViewController: UIViewController {
         UIPasteboard.general.string = mailIDLabel.text
     }
     
+    @IBAction func skypeButtonTapped(_ sender: UIButton) {
+        
+        skypeIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш идентификатор в Skype", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.skypeIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.skypeIDLabel.text = alertController.textFields?.first?.text
+            self?.skypeIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.skypeIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func whatsAppButtonTapped(_ sender: UIButton) {
+        
+        whatsAppIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш идентификатор в WhatsApp", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.whatsAppIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.whatsAppIDLabel.text = alertController.textFields?.first?.text
+            self?.whatsAppIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.whatsAppIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func viberButtonTapped(_ sender: UIButton) {
+        
+        viberIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш идентификатор в Viber", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.viberIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.viberIDLabel.text = alertController.textFields?.first?.text
+            self?.viberIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.viberIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    @IBAction func telegramButtonTapped(_ sender: UIButton) {
+        
+        telegramIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш идентификатор в Telegram", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.telegramIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.telegramIDLabel.text = alertController.textFields?.first?.text
+            self?.telegramIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.telegramIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func slackButtonTapped(_ sender: UIButton) {
+        
+        slackIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш идентификатор в Slack", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.slackIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.slackIDLabel.text = alertController.textFields?.first?.text
+            self?.slackIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.slackIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func iMessageButtonTapped(_ sender: UIButton) {
+        
+        iMessageIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш номер телефона", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.iMessageIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.iMessageIDLabel.text = alertController.textFields?.first?.text
+            self?.iMessageIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.iMessageIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func mailButtonTapped(_ sender: UIButton) {
+        
+        mailIDLabel.backgroundColor = .systemGray5
+        
+        let alertController = UIAlertController(title: "Ваш Email", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { [weak self] tf in
+            tf.placeholder = self?.mailIDLabel.text
+        }
+        
+        let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
+            self?.mailIDLabel.text = alertController.textFields?.first?.text
+            self?.mailIDLabel.backgroundColor = nil
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
+            self?.mailIDLabel.backgroundColor = nil
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(readyAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     private func createLongPressGestureRecognizersAndAddToIDLabels () {
         
         let skypeLPGR = UILongPressGestureRecognizer(target: self, action: #selector(skypeLongPress))
@@ -202,37 +366,37 @@ class UserProfileViewController: UIViewController {
     }
 
     @objc private func skypeLongPress () {
-        skypeIDLabel.backgroundColor = .darkGray
+        skypeIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         skypeCopyButton.isHidden = false
     }
     @objc private func whatsAppLongPress () {
-        whatsAppIDLabel.backgroundColor = .darkGray
+        whatsAppIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         whatsAppCopyButton.isHidden = false
     }
     @objc private func viberLongPress () {
-        viberIDLabel.backgroundColor = .darkGray
+        viberIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         viberCopyButton.isHidden = false
     }
     @objc private func telegramLongPress () {
-        telegramIDLabel.backgroundColor = .darkGray
+        telegramIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         telegramCopyButton.isHidden = false
     }
     @objc private func slackLongPress () {
-        slackIDLabel.backgroundColor = .darkGray
+        slackIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         slackCopyButton.isHidden = false
     }
     @objc private func iMessageLongPress () {
-        iMessageIDLabel.backgroundColor = .darkGray
+        iMessageIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         iMessageCopyButton.isHidden = false
     }
     @objc private func mailLongPress () {
-        mailIDLabel.backgroundColor = .darkGray
+        mailIDLabel.backgroundColor = .systemGray5
         allIDLabelsUserInteraction(isEnabled: false)
         mailCopyButton.isHidden = false
     }
