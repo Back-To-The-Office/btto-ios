@@ -66,6 +66,20 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var mailCopyButton: UIButton!
     
+    @IBOutlet weak var skypeGrayRectangle: UIView!
+    
+    @IBOutlet weak var whatsAppGrayRectangle: UIView!
+    
+    @IBOutlet weak var viberGrayRectangle: UIView!
+    
+    @IBOutlet weak var telegramGrayRectangle: UIView!
+    
+    @IBOutlet weak var slackGrayRectangle: UIView!
+    
+    @IBOutlet weak var iMessageGrayRectangle: UIView!
+    
+    @IBOutlet weak var mailGrayRectangle: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,6 +93,7 @@ class UserProfileViewController: UIViewController {
         
         createLongPressGestureRecognizersAndAddToIDLabels()
         hideAllCopyButtons()
+        hideAllGrayRectangles()
         
     }
     
@@ -178,7 +193,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func skypeButtonTapped(_ sender: UIButton) {
         
-        skypeIDLabel.backgroundColor = .systemGray5
+        skypeGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш идентификатор в Skype", message: nil, preferredStyle: .alert)
         
@@ -188,10 +203,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.skypeIDLabel.text = alertController.textFields?.first?.text
-            self?.skypeIDLabel.backgroundColor = nil
+            self?.skypeGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.skypeIDLabel.backgroundColor = nil
+            self?.skypeGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -202,7 +217,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func whatsAppButtonTapped(_ sender: UIButton) {
         
-        whatsAppIDLabel.backgroundColor = .systemGray5
+        whatsAppGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш идентификатор в WhatsApp", message: nil, preferredStyle: .alert)
         
@@ -212,10 +227,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.whatsAppIDLabel.text = alertController.textFields?.first?.text
-            self?.whatsAppIDLabel.backgroundColor = nil
+            self?.whatsAppGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.whatsAppIDLabel.backgroundColor = nil
+            self?.whatsAppGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -226,7 +241,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func viberButtonTapped(_ sender: UIButton) {
         
-        viberIDLabel.backgroundColor = .systemGray5
+        viberGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш идентификатор в Viber", message: nil, preferredStyle: .alert)
         
@@ -236,10 +251,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.viberIDLabel.text = alertController.textFields?.first?.text
-            self?.viberIDLabel.backgroundColor = nil
+            self?.viberGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.viberIDLabel.backgroundColor = nil
+            self?.viberGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -249,7 +264,7 @@ class UserProfileViewController: UIViewController {
     }
     @IBAction func telegramButtonTapped(_ sender: UIButton) {
         
-        telegramIDLabel.backgroundColor = .systemGray5
+        telegramGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш идентификатор в Telegram", message: nil, preferredStyle: .alert)
         
@@ -259,10 +274,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.telegramIDLabel.text = alertController.textFields?.first?.text
-            self?.telegramIDLabel.backgroundColor = nil
+            self?.telegramGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.telegramIDLabel.backgroundColor = nil
+            self?.telegramGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -273,7 +288,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func slackButtonTapped(_ sender: UIButton) {
         
-        slackIDLabel.backgroundColor = .systemGray5
+        slackGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш идентификатор в Slack", message: nil, preferredStyle: .alert)
         
@@ -283,10 +298,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.slackIDLabel.text = alertController.textFields?.first?.text
-            self?.slackIDLabel.backgroundColor = nil
+            self?.slackGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.slackIDLabel.backgroundColor = nil
+            self?.slackGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -297,7 +312,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func iMessageButtonTapped(_ sender: UIButton) {
         
-        iMessageIDLabel.backgroundColor = .systemGray5
+        iMessageGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш номер телефона", message: nil, preferredStyle: .alert)
         
@@ -307,10 +322,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.iMessageIDLabel.text = alertController.textFields?.first?.text
-            self?.iMessageIDLabel.backgroundColor = nil
+            self?.iMessageGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.iMessageIDLabel.backgroundColor = nil
+            self?.iMessageGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -321,7 +336,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func mailButtonTapped(_ sender: UIButton) {
         
-        mailIDLabel.backgroundColor = .systemGray5
+        mailGrayRectangle.isHidden = false
         
         let alertController = UIAlertController(title: "Ваш Email", message: nil, preferredStyle: .alert)
         
@@ -331,10 +346,10 @@ class UserProfileViewController: UIViewController {
         
         let readyAction = UIAlertAction(title: "Готово", style: .default) { [weak self] _ in
             self?.mailIDLabel.text = alertController.textFields?.first?.text
-            self?.mailIDLabel.backgroundColor = nil
+            self?.mailGrayRectangle.isHidden = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { [weak self] _ in
-            self?.mailIDLabel.backgroundColor = nil
+            self?.mailGrayRectangle.isHidden = true
         }
         
         alertController.addAction(cancelAction)
@@ -475,5 +490,14 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         slackCopyButton.isHidden = true
         iMessageCopyButton.isHidden = true
         mailCopyButton.isHidden = true
+    }
+    private func hideAllGrayRectangles () {
+        skypeGrayRectangle.isHidden = true
+        whatsAppGrayRectangle.isHidden = true
+        viberGrayRectangle.isHidden = true
+        telegramGrayRectangle.isHidden = true
+        slackGrayRectangle.isHidden = true
+        iMessageGrayRectangle.isHidden = true
+        mailGrayRectangle.isHidden = true
     }
 }
