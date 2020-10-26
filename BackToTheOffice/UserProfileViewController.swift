@@ -10,6 +10,10 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
+    var defaultsContentsOffset: CGPoint?
+    
+    var defaultViewHeightConstraintConstant: CGFloat?
+    
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var blackSqareProfileImage: UIView!
@@ -80,6 +84,12 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var mailGrayRectangle: UIView!
     
+    @IBOutlet weak var whiteViewHeightConstraint: NSLayoutConstraint!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -94,6 +104,10 @@ class UserProfileViewController: UIViewController {
         createLongPressGestureRecognizersAndAddToIDLabels()
         hideAllCopyButtons()
         hideAllGrayRectangles()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(kbShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(kbHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
     }
     
@@ -499,5 +513,31 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         slackGrayRectangle.isHidden = true
         iMessageGrayRectangle.isHidden = true
         mailGrayRectangle.isHidden = true
+    }
+    
+    @objc private func kbShow (notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        
+        let kbHeight = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
+        
+        print("Высота клавиатуры: \(kbHeight)")
+        
+        defaultsContentsOffset = CGPoint(x: (self.view as! UIScrollView).contentOffset.x,
+                                         y: (self.view as! UIScrollView).contentOffset.y)
+        
+        defaultViewHeightConstraintConstant = whiteViewHeightConstraint.constant
+        
+        whiteViewHeightConstraint.constant = whiteViewHeightConstraint.constant + kbHeight
+     
+        (self.view as! UIScrollView).setContentOffset(CGPoint(x: (self.view as! UIScrollView).contentOffset.x, y: (self.view as! UIScrollView).contentOffset.y + kbHeight - 80), animated: true)
+    }
+    
+    @objc private func kbHide () {
+        
+        (self.view as! UIScrollView).setContentOffset(defaultsContentsOffset!, animated: true)
+        
+        whiteViewHeightConstraint.constant = defaultViewHeightConstraintConstant!
+        
+        
     }
 }
