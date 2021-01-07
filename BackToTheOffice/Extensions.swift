@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+let secretKey = "Qv9XcwpraF67mCmM"
+
 extension UIView {
     
     func addVerticalGradientLayer (topColor: UIColor, bottomColor: UIColor) {

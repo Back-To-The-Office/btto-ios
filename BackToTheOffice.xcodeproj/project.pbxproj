@@ -11,6 +11,10 @@
 		4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */; };
 		4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */; };
 		4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */; };
+		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
+		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
+		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
+		4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151DD2598D34D0039DE0E /* TokenModel.swift */; };
 		4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7594D252F467D003D113E /* FeedbackViewController.swift */; };
 		4DA7595225303B35003D113E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7595125303B35003D113E /* Assets.xcassets */; };
 		4DA759572530BA28003D113E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA759562530BA27003D113E /* Extensions.swift */; };
@@ -28,6 +32,10 @@
 		4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUserPhotoViewController.swift; sourceTree = "<group>"; };
+		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
+		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
+		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4DA151DD2598D34D0039DE0E /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		4DA7594D252F467D003D113E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		4DA7595125303B35003D113E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA759562530BA27003D113E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -54,6 +62,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DA151E02598D3580039DE0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4DA151DD2598D34D0039DE0E /* TokenModel.swift */,
+				4DA151C3259780190039DE0E /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DA151E12598D37D0039DE0E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DA7594D252F467D003D113E /* FeedbackViewController.swift */,
+				4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */,
+				4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */,
+				4DA151C025967CE10039DE0E /* NewLoginViewController.swift */,
+				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
+				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
+				4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4DA151E22598D3A80039DE0E /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				4DA759872534C3DC003D113E /* SF-Pro-Display-Regular.otf */,
+				4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */,
+				4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */,
+				4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
 		4DCB851825027E9C0063066A = {
 			isa = PBXGroup;
 			children = (
@@ -75,20 +117,14 @@
 			children = (
 				4DCB852425027E9C0063066A /* AppDelegate.swift */,
 				4DCB852625027E9C0063066A /* SceneDelegate.swift */,
-				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
-				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
-				4DA7594D252F467D003D113E /* FeedbackViewController.swift */,
-				4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */,
-				4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */,
+				4DA151E12598D37D0039DE0E /* ViewControllers */,
+				4DA151E02598D3580039DE0E /* Models */,
 				4DA759562530BA27003D113E /* Extensions.swift */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
 				4DCB852F25027EA20063066A /* LaunchScreen.storyboard */,
 				4DA7595125303B35003D113E /* Assets.xcassets */,
 				4DCB853225027EA20063066A /* Info.plist */,
-				4DA759872534C3DC003D113E /* SF-Pro-Display-Regular.otf */,
-				4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */,
-				4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */,
-				4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */,
+				4DA151E22598D3A80039DE0E /* CustomFonts */,
 			);
 			path = BackToTheOffice;
 			sourceTree = "<group>";
@@ -168,12 +204,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
+				4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
+				4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */,
 				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */,
+				4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
+				4DA151C4259780190039DE0E /* UserModel.swift in Sources */,
 				4DA759572530BA28003D113E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UNRNTVQBV;
 				INFOPLIST_FILE = BackToTheOffice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2UNRNTVQBV;
 				INFOPLIST_FILE = BackToTheOffice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

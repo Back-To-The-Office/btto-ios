@@ -10,9 +10,27 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
+    var startTime: Date?
+
+    var finishTime: Date?
+    
     var defaultsContentsOffset: CGPoint?
     
     var defaultViewHeightConstraintConstant: CGFloat?
+    
+    @IBOutlet weak var addHoursButton: UIButton!
+    
+    @IBOutlet weak var workHoursUpGrayLine: UIImageView!
+    
+    @IBOutlet weak var workHoursDownGrayLine: UIImageView!
+    
+    @IBOutlet weak var clockIcon: UIButton!
+    
+    @IBOutlet weak var workingHoursLabel: UILabel!
+    
+    @IBOutlet weak var workingHours: UILabel!
+    
+    @IBOutlet weak var grayPencilButton: UIButton!
     
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -92,7 +110,14 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        workHoursUpGrayLine.isHidden = true
+        workHoursDownGrayLine.isHidden = true
+        grayPencilButton.isHidden = true
+        workingHours.isHidden = true
+        workingHoursLabel.isHidden = true
+        clockIcon.isHidden = true
+    
         whiteView.layer.cornerRadius = 20
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         blackSqareProfileImage.layer.cornerRadius = blackSqareProfileImage.frame.height / 2
@@ -111,6 +136,14 @@ class UserProfileViewController: UIViewController {
         
     }
     
+    @IBAction func addHoursButtonTapped(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "addOrEditHours", sender: nil)
+    }
+    
+    @IBAction func grayPencilButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "addOrEditHours", sender: nil)
+    }
     
     @IBAction func whitePencilDownButtonTapped(_ sender: UIButton) {
         nameIsEdited(true)
@@ -372,6 +405,26 @@ class UserProfileViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func unwindFromEditHoursVC (segue: UIStoryboardSegue) {
+        
+        guard let editHoursVC = segue.source as? EditHoursViewController else { return }
+        
+        startTime = editHoursVC.startTime
+        finishTime = editHoursVC.finishTime
+        
+        let stringTime = formatDate(date: startTime ?? Date()) + " — " + formatDate(date: finishTime ?? Date())
+        workingHours.text = stringTime
+        
+        workHoursUpGrayLine.isHidden = false
+        workHoursDownGrayLine.isHidden = false
+        grayPencilButton.isHidden = false
+        workingHours.isHidden = false
+        workingHoursLabel.isHidden = false
+        clockIcon.isHidden = false
+        addHoursButton.isHidden = true
+        
+    }
+    
     private func createLongPressGestureRecognizersAndAddToIDLabels () {
         
         let skypeLPGR = UILongPressGestureRecognizer(target: self, action: #selector(skypeLongPress))
@@ -492,10 +545,30 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         
         dismiss(animated: true, completion: nil)
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showProfileImage", let seeUserPhotoVC = segue.destination as? SeeUserPhotoViewController else { return }
-        seeUserPhotoVC.currentProfileImage = profileImage.image ?? #imageLiteral(resourceName: "tabBarProfileIcon")
+    private func formatDate (date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.locale = Locale.current
+        return dateFormatter.string(from: date)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showProfileImage" {
+            
+            guard let seeUserPhotoVC = segue.destination as? SeeUserPhotoViewController else { return }
+            seeUserPhotoVC.currentProfileImage = profileImage.image ?? #imageLiteral(resourceName: "tabBarProfileIcon")
+        }
+        if segue.identifier == "addOrEditHours" {
+            
+            guard let startTime = startTime, let finishTime = finishTime, let editHoursVC = segue.destination as? EditHoursViewController else { return }
+            
+            editHoursVC.startTime = startTime
+            editHoursVC.finishTime = finishTime
+        }
+    }
+    
+
     private func hideAllCopyButtons () {
         skypeCopyButton.isHidden = true
         whatsAppCopyButton.isHidden = true
@@ -537,7 +610,6 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
         (self.view as! UIScrollView).setContentOffset(defaultsContentsOffset!, animated: true)
         
         whiteViewHeightConstraint.constant = defaultViewHeightConstraintConstant!
-        
         
     }
 }
