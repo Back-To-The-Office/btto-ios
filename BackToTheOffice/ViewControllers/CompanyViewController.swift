@@ -10,7 +10,7 @@ import UIKit
 
 class CompanyViewController: UIViewController {
     
-    var dataSourceArray = [("Kirill Gundyaev", "Patriarch"),
+    var testDataSourceArray = [("Kirill Gundyaev", "Patriarch"),
                            ("Iosif Stalin", "Dictator"),
                            ("Donald Tramp", "Politician"),
                            ("Fidel Castro", "Revolutionary"),
@@ -22,7 +22,7 @@ class CompanyViewController: UIViewController {
     
     @IBOutlet weak var searchTF: UITextField!
     
-    @IBOutlet weak var CompanyTableView: UITableView!
+    @IBOutlet weak var companyTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +31,10 @@ class CompanyViewController: UIViewController {
         
         searchTF.delegate = self
         
-        CompanyTableView.delegate = self
-        CompanyTableView.dataSource = self
+        companyTableView.delegate = self
+        companyTableView.dataSource = self
+        
+        companyTableView.tableFooterView = UIView()
         
         setupSearchTF()
     }
@@ -66,15 +68,15 @@ class CompanyViewController: UIViewController {
 extension CompanyViewController: UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSourceArray.count
+        return testDataSourceArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "companyCell", for: indexPath) as! CompanyTableViewCell
         cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.height / 2
         cell.profileImage.image = UIImage(named: "testProfileImage\(indexPath.row)")
-        cell.firstNameAndLastNameLabel.text = dataSourceArray[indexPath.row].0
-        cell.positionLabel.text = dataSourceArray[indexPath.row].1
+        cell.firstNameAndLastNameLabel.text = testDataSourceArray[indexPath.row].0
+        cell.positionLabel.text = testDataSourceArray[indexPath.row].1
         cell.greenCircle.layer.cornerRadius = 4
         
         //Временная затычка

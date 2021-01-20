@@ -14,6 +14,9 @@
 		4D2E9F0D25B3844B00D08CDC /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */; };
 		4D2E9F1125B4495B00D08CDC /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */; };
 		4D2E9F1425B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1325B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf */; };
+		4D2E9F1825B4DB3A00D08CDC /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */; };
+		4D2E9F1D25B5730F00D08CDC /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */; };
+		4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */; };
 		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
 		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
 		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
@@ -38,6 +41,9 @@
 		4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		4D2E9F1325B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPageViewController.swift; sourceTree = "<group>"; };
 		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
 		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -68,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D2E9F1A25B4DB7100D08CDC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */,
+				4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		4DA151E02598D3580039DE0E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +98,13 @@
 				4DA7594D252F467D003D113E /* FeedbackViewController.swift */,
 				4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */,
 				4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */,
+				4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */,
+				4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */,
 				4DA151C025967CE10039DE0E /* NewLoginViewController.swift */,
 				4D0148E4250FFF6E0025451E /* LoginViewController.swift */,
 				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
 				4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */,
 				4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */,
-				4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -127,6 +143,7 @@
 				4DCB852425027E9C0063066A /* AppDelegate.swift */,
 				4DCB852625027E9C0063066A /* SceneDelegate.swift */,
 				4DA151E12598D37D0039DE0E /* ViewControllers */,
+				4D2E9F1A25B4DB7100D08CDC /* TableViewCells */,
 				4DA151E02598D3580039DE0E /* Models */,
 				4DA759562530BA27003D113E /* Extensions.swift */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
@@ -213,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2E9F1D25B5730F00D08CDC /* TeamsTableViewCell.swift in Sources */,
 				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
 				4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
@@ -223,9 +241,11 @@
 				4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
+				4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
 				4D2E9F0D25B3844B00D08CDC /* CompanyViewController.swift in Sources */,
 				4DA151C4259780190039DE0E /* UserModel.swift in Sources */,
+				4D2E9F1825B4DB3A00D08CDC /* TeamsViewController.swift in Sources */,
 				4DA759572530BA28003D113E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
