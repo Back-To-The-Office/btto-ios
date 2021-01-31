@@ -10,10 +10,10 @@ import Foundation
 
 struct TokenModel: Codable {
     
-    let scope: String
-    let jti: String
-    let expiresIn: Int
-    let tokenType: String
-    let accessToken: String
+    let scope: String?
+    let jti: String?
+    let expiresIn: Int?
+    let tokenType: String?
+    let accessToken: String?
     
 }

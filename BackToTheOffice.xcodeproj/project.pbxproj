@@ -17,10 +17,13 @@
 		4D2E9F1825B4DB3A00D08CDC /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */; };
 		4D2E9F1D25B5730F00D08CDC /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */; };
 		4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */; };
+		4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */; };
+		4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */; };
 		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
 		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
 		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
 		4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151DD2598D34D0039DE0E /* TokenModel.swift */; };
+		4DA310E725C3FD680031428D /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA310E625C3FD680031428D /* SceneManager.swift */; };
 		4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7594D252F467D003D113E /* FeedbackViewController.swift */; };
 		4DA7595225303B35003D113E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7595125303B35003D113E /* Assets.xcassets */; };
 		4DA759572530BA28003D113E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA759562530BA27003D113E /* Extensions.swift */; };
@@ -44,10 +47,13 @@
 		4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPageViewController.swift; sourceTree = "<group>"; };
+		4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplaces.swift; sourceTree = "<group>"; };
+		4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplacesScene.swift; sourceTree = "<group>"; };
 		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
 		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4DA151DD2598D34D0039DE0E /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
+		4DA310E625C3FD680031428D /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		4DA7594D252F467D003D113E /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		4DA7595125303B35003D113E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA759562530BA27003D113E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -83,6 +89,15 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		4D60321125BC1746009D70D0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */,
+				4DA310E625C3FD680031428D /* SceneManager.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		4DA151E02598D3580039DE0E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +120,7 @@
 				4DCB852825027E9C0063066A /* RegisterViewController.swift */,
 				4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */,
 				4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */,
+				4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +162,7 @@
 				4D2E9F1A25B4DB7100D08CDC /* TableViewCells */,
 				4DA151E02598D3580039DE0E /* Models */,
 				4DA759562530BA27003D113E /* Extensions.swift */,
+				4D60321125BC1746009D70D0 /* Scenes */,
 				4DCB852A25027E9C0063066A /* Main.storyboard */,
 				4DCB852F25027EA20063066A /* LaunchScreen.storyboard */,
 				4DA7595125303B35003D113E /* Assets.xcassets */,
@@ -232,6 +249,8 @@
 			files = (
 				4D2E9F1D25B5730F00D08CDC /* TeamsTableViewCell.swift in Sources */,
 				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
+				4DA310E725C3FD680031428D /* SceneManager.swift in Sources */,
+				4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */,
 				4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
 				4D2E9F1125B4495B00D08CDC /* CompanyTableViewCell.swift in Sources */,
@@ -239,6 +258,7 @@
 				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */,
 				4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */,
+				4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZI-Oe-WrQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x2F-O5-phz">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -1327,7 +1327,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.16078431369999999" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstItem="Tmx-Nc-bsn" firstAttribute="centerX" secondItem="OC1-8Z-crE" secondAttribute="centerX" id="4Ao-80-GAS"/>
                                     <constraint firstItem="Tmx-Nc-bsn" firstAttribute="top" secondItem="m7L-pS-EGl" secondAttribute="bottom" constant="13.666666666666686" id="5hU-Tg-4hK"/>
@@ -2157,6 +2157,9 @@
                     <navigationItem key="navigationItem" title="Profile" id="NoC-fc-GVh">
                         <barButtonItem key="rightBarButtonItem" image="ellipsis" catalog="system" id="GG4-dr-27f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="MJl-aY-0gp" kind="show" id="gwg-KR-jKH"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1335"/>
@@ -2438,9 +2441,11 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHh-P9-QGl">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstItem="AHh-P9-QGl" firstAttribute="leading" secondItem="Tuw-dV-8ih" secondAttribute="leading" id="Aqw-O6-ZEK"/>
                                     <constraint firstAttribute="bottom" secondItem="AHh-P9-QGl" secondAttribute="bottom" constant="200" id="BFO-QV-QuX"/>
@@ -2465,6 +2470,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GFe-rA-3Wq"/>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.47450980390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dP9-Nq-AsH" firstAttribute="top" secondItem="GFe-rA-3Wq" secondAttribute="top" constant="16" id="2eR-SO-7AT"/>
                             <constraint firstItem="Tuw-dV-8ih" firstAttribute="trailing" secondItem="Xiv-g2-Djb" secondAttribute="trailing" id="KOi-Qg-xU4"/>
@@ -2484,6 +2490,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXw-Pf-N0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6059" y="-997"/>
+        </scene>
+        <!--Workplaces-->
+        <scene sceneID="LOb-8M-vJf">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="MJl-aY-0gp" customClass="ReservationOfWorkplaces" customModule="BackToTheOffice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOn-76-62t">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="O9y-qR-SXE"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="tintColor" systemColor="linkColor"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Workplaces" id="raK-dc-jTu">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="k4z-oC-ywh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="rightBarButtonItemTapped:" destination="MJl-aY-0gp" id="eLb-zL-yN8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="rightBarButtonItem" destination="k4z-oC-ywh" id="5Vb-vm-FSm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddq-le-LP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6900" y="-997.19222462203027"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="QDM-ID-sJh">
@@ -3682,11 +3717,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNI-Rg-4Ho">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-T3-M1t">
+                                        <rect key="frame" x="195.66666666666666" y="444.66666666666669" width="37" height="37"/>
+                                        <color key="color" red="0.075116552409999995" green="0.45816016199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1ph-T3-M1t" firstAttribute="centerY" secondItem="BNI-Rg-4Ho" secondAttribute="centerY" id="2gA-cD-ycq"/>
+                                    <constraint firstItem="1ph-T3-M1t" firstAttribute="centerX" secondItem="BNI-Rg-4Ho" secondAttribute="centerX" id="evV-XW-Ymr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j8v-z0-WgD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mIe-15-FY2" firstAttribute="top" secondItem="KT7-nV-Ib9" secondAttribute="bottom" constant="1" id="2sU-06-c8L"/>
+                            <constraint firstAttribute="bottom" secondItem="BNI-Rg-4Ho" secondAttribute="bottom" id="3JI-tN-laW"/>
                             <constraint firstItem="huT-ed-FcU" firstAttribute="top" secondItem="FMH-xe-uXd" secondAttribute="bottom" constant="7" id="ATP-EW-Ipr"/>
                             <constraint firstItem="j8v-z0-WgD" firstAttribute="trailing" secondItem="mIe-15-FY2" secondAttribute="trailing" constant="16" id="Ahs-ME-LaV"/>
                             <constraint firstItem="huT-ed-FcU" firstAttribute="leading" secondItem="j8v-z0-WgD" secondAttribute="leading" constant="16" id="BDT-QR-syO"/>
@@ -3698,6 +3748,7 @@
                             <constraint firstItem="f9u-lE-jtS" firstAttribute="top" secondItem="j8v-z0-WgD" secondAttribute="top" constant="16" id="OfB-mI-xKf"/>
                             <constraint firstItem="mIe-15-FY2" firstAttribute="leading" secondItem="j8v-z0-WgD" secondAttribute="leading" constant="16" id="QuI-0n-ZV5"/>
                             <constraint firstItem="j8v-z0-WgD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FMH-xe-uXd" secondAttribute="trailing" symbolic="YES" id="Rug-Nu-o3b"/>
+                            <constraint firstItem="BNI-Rg-4Ho" firstAttribute="leading" secondItem="j8v-z0-WgD" secondAttribute="leading" id="T3z-bt-3jM"/>
                             <constraint firstItem="j8v-z0-WgD" firstAttribute="trailing" secondItem="C9D-dL-Iba" secondAttribute="trailing" constant="16" id="XSo-jk-gWz"/>
                             <constraint firstItem="UP4-ve-dIs" firstAttribute="leading" secondItem="KT7-nV-Ib9" secondAttribute="leading" id="YCJ-dy-VEi"/>
                             <constraint firstItem="C9D-dL-Iba" firstAttribute="leading" secondItem="j8v-z0-WgD" secondAttribute="leading" constant="16" id="Z4U-o6-QCb"/>
@@ -3706,7 +3757,9 @@
                             <constraint firstItem="j8v-z0-WgD" firstAttribute="bottom" secondItem="C9D-dL-Iba" secondAttribute="bottom" constant="17" id="eX5-Lj-97f"/>
                             <constraint firstItem="KT7-nV-Ib9" firstAttribute="leading" secondItem="j8v-z0-WgD" secondAttribute="leading" constant="16" id="ewd-OL-VBA"/>
                             <constraint firstItem="j8v-z0-WgD" firstAttribute="trailing" secondItem="KT7-nV-Ib9" secondAttribute="trailing" constant="16" id="lMY-Ri-i0Q"/>
+                            <constraint firstItem="BNI-Rg-4Ho" firstAttribute="top" secondItem="jBa-zn-MIl" secondAttribute="top" id="mzq-CO-cK2"/>
                             <constraint firstItem="f9u-lE-jtS" firstAttribute="centerX" secondItem="jBa-zn-MIl" secondAttribute="centerX" id="qEv-MQ-OVb"/>
+                            <constraint firstItem="BNI-Rg-4Ho" firstAttribute="trailing" secondItem="j8v-z0-WgD" secondAttribute="trailing" id="rBe-8v-CTY"/>
                             <constraint firstItem="x2U-2F-0RT" firstAttribute="centerX" secondItem="jBa-zn-MIl" secondAttribute="centerX" id="rcE-dX-YTb"/>
                             <constraint firstItem="39I-2k-bLi" firstAttribute="top" secondItem="huT-ed-FcU" secondAttribute="bottom" constant="1" id="sgL-DG-qA0"/>
                             <constraint firstItem="huT-ed-FcU" firstAttribute="top" secondItem="KT7-nV-Ib9" secondAttribute="bottom" constant="50" id="tbZ-BT-sEp"/>
@@ -3714,6 +3767,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="1ph-T3-M1t" id="yqo-Nm-RKi"/>
+                        <outlet property="blackView" destination="BNI-Rg-4Ho" id="pkY-eN-S3z"/>
                         <outlet property="continueButton" destination="C9D-dL-Iba" id="Kmf-qH-GTx"/>
                         <outlet property="emailGrayLine" destination="mIe-15-FY2" id="Lg8-Yf-Hvy"/>
                         <outlet property="emailSmallLabel" destination="UP4-ve-dIs" id="eGG-va-JxI"/>
@@ -3726,7 +3781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBd-c4-9yt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2078.2608695652175" y="-997.09821428571422"/>
+            <point key="canvasLocation" x="-2078.9719626168221" y="-997.19222462203027"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dfn-t9-Yof">
@@ -3857,6 +3912,9 @@
         <image name="whitePencil" width="17" height="17"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

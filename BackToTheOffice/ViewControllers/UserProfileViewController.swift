@@ -10,6 +10,8 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
+    var currentUser: UserModel!
+    
     var startTime: Date?
 
     var finishTime: Date?
@@ -110,6 +112,15 @@ class UserProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("*Данные переданные в UserProfileViewController:" )
+        print(currentUser ?? "Нет данных - Жопа!")
+        
+        let firstAndLastName = "\(currentUser.firstName ?? "нет имени") \(currentUser.lastName ?? "нет фамилии")"
+        firstAndLastNameTF.text = firstAndLastName
+        
+        let position = currentUser.position ?? "нет должности"
+        positionTF.text = position
         
         workHoursUpGrayLine.isHidden = true
         workHoursDownGrayLine.isHidden = true

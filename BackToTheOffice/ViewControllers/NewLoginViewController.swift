@@ -12,10 +12,21 @@ class NewLoginViewController: UIViewController {
     
     var tokenModel = TokenModel(scope: "", jti: "", expiresIn: 0, tokenType: "", accessToken: "") {
         didSet {
-            let currentUserModel = getCurrentUserData(tokenModel: tokenModel)
+            print("-------------------")
+            print("Запустилось получение JSON currentUser")
             
-            print(currentUserModel)
+            getCurrentUserData(tokenModel: tokenModel)
+        }
+    }
+    var currentUser: UserModel? {
+        didSet {
             
+            if currentUser != nil {
+                DispatchQueue.main.async { [weak self] in
+                    self?.performSegue(withIdentifier: "signInToTabBar", sender: nil)
+                }
+               
+            }
         }
     }
     
@@ -33,20 +44,34 @@ class NewLoginViewController: UIViewController {
     
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBOutlet weak var blackView: UIView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        blackView.isHidden = true
+        blackView.alpha = 0
+        activityIndicator.isHidden = true
         
         emailTF.delegate = self
         passwordTF.delegate = self
         
         emailSmallLabel.isHidden = true
         passwordSmallLabel.isHidden = true
-       
+        
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
+        
+        blackView.isHidden = false
+        UIView.animate(withDuration: 1, animations: { [unowned self] in
+            blackView.alpha = 0.5
+        })
+        activityIndicator.isHidden = false
+//        activityIndicator.startAnimating()
+        
         
         guard let email = emailTF.text , let password = passwordTF.text, email != "", password != "" else {
             
@@ -68,34 +93,35 @@ class NewLoginViewController: UIViewController {
         let session = URLSession.shared
         session.dataTask(with: request) { [weak self] data, response,error in
             guard error == nil else {
+                print("Токен авторизации не получен")
                 print (error!.localizedDescription)
                 return
             }
-//            if let response = response {
-//
-//            }
+            //            if let response = response {
+            //
+            //            }
             if let data = data {
                 
                 //Сохраняем в UserDefault не распарсивая
                 UserDefaults().setValue(data, forKey: "TokenModel")
                 //Если, потом, будем доставать из UserDefault:
                 //Это проверено - работает
-//                do {
-//                    let data = UserDefaults().object(forKey: "TokenModel") as! Data
-//                    let t = try JSONSerialization.jsonObject(with: data, options: [])
-//                    print(t)
-//                } catch {
-//                    print(error)
-//                }
+                //                do {
+                //                    let data = UserDefaults().object(forKey: "TokenModel") as! Data
+                //                    let t = try JSONSerialization.jsonObject(with: data, options: [])
+                //                    print(t)
+                //                } catch {
+                //                    print(error)
+                //                }
                 
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
                     
-                    let token = TokenModel(scope: json["scope"] as! String,
-                                           jti: json["jti"] as! String,
-                                           expiresIn: json["expires_in"] as! Int,
-                                           tokenType: json["token_type"] as! String,
-                                           accessToken: json["access_token"] as! String)
+                    let token = TokenModel(scope: json["scope"] as? String,
+                                           jti: json["jti"] as? String,
+                                           expiresIn: json["expires_in"] as? Int,
+                                           tokenType: json["token_type"] as? String,
+                                           accessToken: json["access_token"] as? String)
                     self?.tokenModel = token
                     
                 } catch {
@@ -103,6 +129,18 @@ class NewLoginViewController: UIViewController {
                 }
             }
         }.resume()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarC = segue.destination as? UITabBarController else { return }
+        tabBarC.selectedIndex = 3
+        print("TabBar selected Index = 3")
+        guard let navigationController = tabBarC.viewControllers?[3] as? UINavigationController else { return }
+        print("NavigationController - ok")
+        guard let userProfileVC = navigationController.topViewController as? UserProfileViewController else {
+            return }
+        
+        userProfileVC.currentUser = self.currentUser
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -120,13 +158,17 @@ class NewLoginViewController: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    private func getCurrentUserData (tokenModel: TokenModel) -> UserModel? {
-
+    private func getCurrentUserData (tokenModel: TokenModel) {
+        
         let urlString = "https://btto-back.herokuapp.com/api/v1/users/current"
         guard let url = URL(string: urlString) else {
             print("Неверный URL")
-            return nil }
-        let authorizationKey = "bearer ".appending(tokenModel.accessToken)
+            return }
+        guard let accessToken = tokenModel.accessToken else {
+            print("Нет Токена")
+            return
+        }
+        let authorizationKey = "bearer ".appending(accessToken)
         print(authorizationKey)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -138,63 +180,36 @@ class NewLoginViewController: UIViewController {
         session.dataTask(with: request) { data, response, error in
             
             guard error == nil else {
+                print("Данные Current User не получены")
                 print (error!.localizedDescription)
                 print(error!)
                 return
             }
             if let response = response {
-print(response)
+                print(response)
             }
             if let data = data {
                 
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-                    print(json)
-//                    let currentUser = UserModel(contacts: <#T##String#>,
-//                                                email: <#T##String#>,
-//                                                firstName: <#T##String#>,
-//                                                id: <#T##Int#>,
-//                                                lastName: <#T##String#>,
-//                                                position: <#T##String#>,
-//                                                timesone: <#T##UserModel.Timezone#>)
-//
-//
+                    print("JSON currentUser получен")
+                    
+                    let currentUser = UserModel(contacts: "",
+                                                email: json["email"] as? String,
+                                                firstName: json["firstName"] as? String,
+                                                id: 0,
+                                                lastName: json["lastName"] as? String,
+                                                position: json["position"] as? String,
+                                                timesone: Timezone(id: ""))
+                    
+                    self.currentUser = currentUser
+                    print(currentUser)
                 } catch {
-                    print("Не получилось парсить JSON")
+                    print("*Не получилось парсить JSON")
                 }
             }
         }.resume()
-            
-            
-            
-        
-        //performSegue(withIdentifier: "signInToTabBar", sender: nil)
-return nil // UserModel
     }
-    
-//    private func get (url: String) {
-//
-//
-//
-//
-//        guard let url = URL(string: url) else { return }
-//
-//        let session = URLSession.shared
-//        session.dataTask(with: url) { (data, response, error) in
-//            guard let response = response, let data = data else {
-//                print (error?.localizedDescription ?? "Неизвестная ошибка")
-//                return }
-//
-//            print(response.description)
-//
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data, options: [])
-//                print(json)
-//            } catch {
-//                print (error.localizedDescription)
-//            }
-//        }.resume()
-//    }
 }
 
 extension NewLoginViewController: UITextFieldDelegate {
