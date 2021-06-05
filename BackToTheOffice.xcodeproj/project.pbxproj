@@ -19,6 +19,8 @@
 		4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */; };
 		4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */; };
 		4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */; };
+		4D7755CC2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */; };
+		4D7755D526696A7C00C5CF8B /* BookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */; };
 		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
 		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
 		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
@@ -49,6 +51,8 @@
 		4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPageViewController.swift; sourceTree = "<group>"; };
 		4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplaces.swift; sourceTree = "<group>"; };
 		4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplacesScene.swift; sourceTree = "<group>"; };
+		4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloAndBookYourPlaceViewController.swift; sourceTree = "<group>"; };
+		4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceViewController.swift; sourceTree = "<group>"; };
 		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
 		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */,
 				4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */,
 				4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */,
+				4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */,
+				4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 				4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */,
 				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */,
+				4D7755D526696A7C00C5CF8B /* BookYourPlaceViewController.swift in Sources */,
 				4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */,
 				4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */,
+				4D7755CC2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
 				4D2E9F0D25B3844B00D08CDC /* CompanyViewController.swift in Sources */,
 				4DA151C4259780190039DE0E /* UserModel.swift in Sources */,
