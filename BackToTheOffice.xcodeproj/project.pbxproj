@@ -22,6 +22,8 @@
 		4D7755CC2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */; };
 		4D7755D526696A7C00C5CF8B /* BookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */; };
 		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
+		4D90A3CD266D646100043F35 /* SelectOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */; };
+		4D90A3D0266D647A00043F35 /* SelectRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */; };
 		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
 		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
 		4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151DD2598D34D0039DE0E /* TokenModel.swift */; };
@@ -54,6 +56,8 @@
 		4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloAndBookYourPlaceViewController.swift; sourceTree = "<group>"; };
 		4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceViewController.swift; sourceTree = "<group>"; };
 		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
+		4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfficeViewController.swift; sourceTree = "<group>"; };
+		4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomViewController.swift; sourceTree = "<group>"; };
 		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4DA151DD2598D34D0039DE0E /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */,
 				4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */,
 				4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */,
+				4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */,
+				4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
 				4DA310E725C3FD680031428D /* SceneManager.swift in Sources */,
 				4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */,
+				4D90A3CD266D646100043F35 /* SelectOfficeViewController.swift in Sources */,
+				4D90A3D0266D647A00043F35 /* SelectRoomViewController.swift in Sources */,
 				4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
 				4D2E9F1125B4495B00D08CDC /* CompanyTableViewCell.swift in Sources */,

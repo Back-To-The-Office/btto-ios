@@ -19,8 +19,23 @@ class BookYourPlaceViewController: UIViewController {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func addDaysButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func selectOfficeButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "SegueToSelectOfficeViewController", sender: nil)
+    }
+    
+    @IBAction func selectRoomButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "SegueToSelectRoomViewController", sender: nil)
+    }
+    
+    
+    
+    
+    
     
 }
