@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,19 +11,22 @@
 		4D0148E72512A56C0025451E /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */; };
 		4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */; };
 		4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */; };
+		4D079D26267FE5F700105A19 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D079D25267FE5F700105A19 /* CalendarViewController.swift */; };
+		4D12B82526AC4AF8002CF42F /* Desk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D12B82426AC4AF8002CF42F /* Desk.swift */; };
 		4D2E9F0D25B3844B00D08CDC /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */; };
 		4D2E9F1125B4495B00D08CDC /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */; };
 		4D2E9F1425B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1325B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf */; };
 		4D2E9F1825B4DB3A00D08CDC /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */; };
 		4D2E9F1D25B5730F00D08CDC /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */; };
 		4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */; };
+		4D5E9621269355E400244905 /* SelectOfficeOrRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5E9620269355E400244905 /* SelectOfficeOrRoomTableViewCell.swift */; };
 		4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */; };
 		4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */; };
 		4D7755CC2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */; };
 		4D7755D526696A7C00C5CF8B /* BookYourPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */; };
+		4D813209269F276600385787 /* BookYourPlaceFirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D813208269F276600385787 /* BookYourPlaceFirstTableViewCell.swift */; };
 		4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */; };
-		4D90A3CD266D646100043F35 /* SelectOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */; };
-		4D90A3D0266D647A00043F35 /* SelectRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */; };
+		4D90A3CD266D646100043F35 /* SelectOfficeOrRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90A3CC266D646100043F35 /* SelectOfficeOrRoomViewController.swift */; };
 		4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C025967CE10039DE0E /* NewLoginViewController.swift */; };
 		4DA151C4259780190039DE0E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151C3259780190039DE0E /* UserModel.swift */; };
 		4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA151DD2598D34D0039DE0E /* TokenModel.swift */; };
@@ -31,6 +34,8 @@
 		4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7594D252F467D003D113E /* FeedbackViewController.swift */; };
 		4DA7595225303B35003D113E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7595125303B35003D113E /* Assets.xcassets */; };
 		4DA759572530BA28003D113E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA759562530BA27003D113E /* Extensions.swift */; };
+		4DBC30D926A3814000303A62 /* BookYourPlaceSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC30D826A3814000303A62 /* BookYourPlaceSecondTableViewCell.swift */; };
+		4DBC30DC26A4129500303A62 /* BookYourPlaceThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBC30DB26A4129500303A62 /* BookYourPlaceThirdTableViewCell.swift */; };
 		4DC6F76D2508ED9200F36588 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */; };
 		4DC6F76F2508EDAE00F36588 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */; };
 		4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852425027E9C0063066A /* AppDelegate.swift */; };
@@ -38,6 +43,8 @@
 		4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB852825027E9C0063066A /* RegisterViewController.swift */; };
 		4DCB852C25027E9C0063066A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB852A25027E9C0063066A /* Main.storyboard */; };
 		4DCB853125027EA20063066A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB852F25027EA20063066A /* LaunchScreen.storyboard */; };
+		4DDC270B26B04CC400A77A04 /* HelloScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC270A26B04CC400A77A04 /* HelloScreenViewController.swift */; };
+		86E1D6D7B53F8B603FA0699F /* Pods_BackToTheOffice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83783E5AEA794CF003EC41C /* Pods_BackToTheOffice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,19 +52,22 @@
 		4D0148E62512A56C0025451E /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		4D037725253E0D2B0004D2C8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		4D03772925401EC50004D2C8 /* SeeUserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUserPhotoViewController.swift; sourceTree = "<group>"; };
+		4D079D25267FE5F700105A19 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4D12B82426AC4AF8002CF42F /* Desk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desk.swift; sourceTree = "<group>"; };
 		4D2E9F0C25B3844B00D08CDC /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		4D2E9F1325B44C9A00D08CDC /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		4D2E9F1725B4DB3A00D08CDC /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		4D2E9F2025B62E4100D08CDC /* TeamsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsPageViewController.swift; sourceTree = "<group>"; };
+		4D5E9620269355E400244905 /* SelectOfficeOrRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfficeOrRoomTableViewCell.swift; sourceTree = "<group>"; };
 		4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplaces.swift; sourceTree = "<group>"; };
 		4D60320B25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationOfWorkplacesScene.swift; sourceTree = "<group>"; };
 		4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloAndBookYourPlaceViewController.swift; sourceTree = "<group>"; };
 		4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceViewController.swift; sourceTree = "<group>"; };
+		4D813208269F276600385787 /* BookYourPlaceFirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceFirstTableViewCell.swift; sourceTree = "<group>"; };
 		4D90755025A4FACB007DDCF1 /* EditHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHoursViewController.swift; sourceTree = "<group>"; };
-		4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfficeViewController.swift; sourceTree = "<group>"; };
-		4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoomViewController.swift; sourceTree = "<group>"; };
+		4D90A3CC266D646100043F35 /* SelectOfficeOrRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfficeOrRoomViewController.swift; sourceTree = "<group>"; };
 		4DA151C025967CE10039DE0E /* NewLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginViewController.swift; sourceTree = "<group>"; };
 		4DA151C3259780190039DE0E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4DA151DD2598D34D0039DE0E /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
@@ -66,6 +76,8 @@
 		4DA7595125303B35003D113E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA759562530BA27003D113E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4DA759872534C3DC003D113E /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		4DBC30D826A3814000303A62 /* BookYourPlaceSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceSecondTableViewCell.swift; sourceTree = "<group>"; };
+		4DBC30DB26A4129500303A62 /* BookYourPlaceThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourPlaceThirdTableViewCell.swift; sourceTree = "<group>"; };
 		4DC6F76C2508ED9200F36588 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		4DC6F76E2508EDAE00F36588 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		4DCB852125027E9C0063066A /* BackToTheOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackToTheOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +87,10 @@
 		4DCB852B25027E9C0063066A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DCB853025027EA20063066A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DCB853225027EA20063066A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDC270A26B04CC400A77A04 /* HelloScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloScreenViewController.swift; sourceTree = "<group>"; };
+		A83783E5AEA794CF003EC41C /* Pods_BackToTheOffice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackToTheOffice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C482B1F80E6D9EE89C6B674B /* Pods-BackToTheOffice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToTheOffice.debug.xcconfig"; path = "Target Support Files/Pods-BackToTheOffice/Pods-BackToTheOffice.debug.xcconfig"; sourceTree = "<group>"; };
+		FD21E02EF17E439B34F6FA93 /* Pods-BackToTheOffice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackToTheOffice.release.xcconfig"; path = "Target Support Files/Pods-BackToTheOffice/Pods-BackToTheOffice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E1D6D7B53F8B603FA0699F /* Pods_BackToTheOffice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,10 @@
 			children = (
 				4D2E9F1025B4495B00D08CDC /* CompanyTableViewCell.swift */,
 				4D2E9F1C25B5730E00D08CDC /* TeamsTableViewCell.swift */,
+				4D5E9620269355E400244905 /* SelectOfficeOrRoomTableViewCell.swift */,
+				4D813208269F276600385787 /* BookYourPlaceFirstTableViewCell.swift */,
+				4DBC30D826A3814000303A62 /* BookYourPlaceSecondTableViewCell.swift */,
+				4DBC30DB26A4129500303A62 /* BookYourPlaceThirdTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -111,6 +132,7 @@
 			children = (
 				4DA151DD2598D34D0039DE0E /* TokenModel.swift */,
 				4DA151C3259780190039DE0E /* UserModel.swift */,
+				4D12B82426AC4AF8002CF42F /* Desk.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,8 +153,9 @@
 				4D60320825BB59F7009D70D0 /* ReservationOfWorkplaces.swift */,
 				4D7755CB2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift */,
 				4D7755D426696A7C00C5CF8B /* BookYourPlaceViewController.swift */,
-				4D90A3CC266D646100043F35 /* SelectOfficeViewController.swift */,
-				4D90A3CF266D647A00043F35 /* SelectRoomViewController.swift */,
+				4D079D25267FE5F700105A19 /* CalendarViewController.swift */,
+				4D90A3CC266D646100043F35 /* SelectOfficeOrRoomViewController.swift */,
+				4DDC270A26B04CC400A77A04 /* HelloScreenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -154,6 +177,8 @@
 			children = (
 				4DCB852325027E9C0063066A /* BackToTheOffice */,
 				4DCB852225027E9C0063066A /* Products */,
+				742A18DE5D819C956F9E1D24 /* Pods */,
+				E4DF0304DF95BB241FB6F13E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +209,23 @@
 			path = BackToTheOffice;
 			sourceTree = "<group>";
 		};
+		742A18DE5D819C956F9E1D24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C482B1F80E6D9EE89C6B674B /* Pods-BackToTheOffice.debug.xcconfig */,
+				FD21E02EF17E439B34F6FA93 /* Pods-BackToTheOffice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4DF0304DF95BB241FB6F13E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A83783E5AEA794CF003EC41C /* Pods_BackToTheOffice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DCB853525027EA20063066A /* Build configuration list for PBXNativeTarget "BackToTheOffice" */;
 			buildPhases = (
+				2CB3E9DACEBE9E4AEE92B1E1 /* [CP] Check Pods Manifest.lock */,
 				4DCB851D25027E9C0063066A /* Sources */,
 				4DCB851E25027E9C0063066A /* Frameworks */,
 				4DCB851F25027E9C0063066A /* Resources */,
+				97B4A33AA5C01F602BF2F9AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +298,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CB3E9DACEBE9E4AEE92B1E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackToTheOffice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97B4A33AA5C01F602BF2F9AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BackToTheOffice/Pods-BackToTheOffice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BackToTheOffice/Pods-BackToTheOffice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BackToTheOffice/Pods-BackToTheOffice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DCB851D25027E9C0063066A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,24 +349,30 @@
 				4D03772A25401EC50004D2C8 /* SeeUserPhotoViewController.swift in Sources */,
 				4DA310E725C3FD680031428D /* SceneManager.swift in Sources */,
 				4D60320925BB59F7009D70D0 /* ReservationOfWorkplaces.swift in Sources */,
-				4D90A3CD266D646100043F35 /* SelectOfficeViewController.swift in Sources */,
-				4D90A3D0266D647A00043F35 /* SelectRoomViewController.swift in Sources */,
+				4D90A3CD266D646100043F35 /* SelectOfficeOrRoomViewController.swift in Sources */,
+				4D079D26267FE5F700105A19 /* CalendarViewController.swift in Sources */,
 				4DA151DE2598D34D0039DE0E /* TokenModel.swift in Sources */,
 				4D0148E5250FFF6E0025451E /* LoginViewController.swift in Sources */,
 				4D2E9F1125B4495B00D08CDC /* CompanyTableViewCell.swift in Sources */,
+				4DBC30DC26A4129500303A62 /* BookYourPlaceThirdTableViewCell.swift in Sources */,
 				4DA151C125967CE10039DE0E /* NewLoginViewController.swift in Sources */,
 				4DA7594E252F467D003D113E /* FeedbackViewController.swift in Sources */,
 				4D037726253E0D2B0004D2C8 /* UserProfileViewController.swift in Sources */,
 				4D7755D526696A7C00C5CF8B /* BookYourPlaceViewController.swift in Sources */,
 				4D90755125A4FACB007DDCF1 /* EditHoursViewController.swift in Sources */,
+				4D5E9621269355E400244905 /* SelectOfficeOrRoomTableViewCell.swift in Sources */,
 				4D60320C25BB5A71009D70D0 /* ReservationOfWorkplacesScene.swift in Sources */,
+				4D12B82526AC4AF8002CF42F /* Desk.swift in Sources */,
 				4DCB852925027E9C0063066A /* RegisterViewController.swift in Sources */,
+				4DDC270B26B04CC400A77A04 /* HelloScreenViewController.swift in Sources */,
 				4DCB852525027E9C0063066A /* AppDelegate.swift in Sources */,
 				4D2E9F2125B62E4200D08CDC /* TeamsPageViewController.swift in Sources */,
 				4D7755CC2668137C00C5CF8B /* HelloAndBookYourPlaceViewController.swift in Sources */,
 				4DCB852725027E9C0063066A /* SceneDelegate.swift in Sources */,
 				4D2E9F0D25B3844B00D08CDC /* CompanyViewController.swift in Sources */,
+				4D813209269F276600385787 /* BookYourPlaceFirstTableViewCell.swift in Sources */,
 				4DA151C4259780190039DE0E /* UserModel.swift in Sources */,
+				4DBC30D926A3814000303A62 /* BookYourPlaceSecondTableViewCell.swift in Sources */,
 				4D2E9F1825B4DB3A00D08CDC /* TeamsViewController.swift in Sources */,
 				4DA759572530BA28003D113E /* Extensions.swift in Sources */,
 			);
@@ -426,6 +518,7 @@
 		};
 		4DCB853625027EA20063066A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C482B1F80E6D9EE89C6B674B /* Pods-BackToTheOffice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -445,6 +538,7 @@
 		};
 		4DCB853725027EA20063066A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD21E02EF17E439B34F6FA93 /* Pods-BackToTheOffice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
